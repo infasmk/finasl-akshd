@@ -3,29 +3,29 @@ import { motion } from "motion/react";
 export default function Timeline() {
   const CAREER_TIMELINE = [
     {
-      period: "2024 - PRESENT",
-      title: "Senior Retail Architect & Design Lead",
-      location: "APAC, MENA & EEA Development Regions",
+      period: "2026 - Present",
+      title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
+      location: "",
       stats: "120+ Retail Spaces | Core Leader",
     },
     {
-      period: "2023 - 2024",
-      title: "Concept Architect & Spatial Designer",
-      location: "Abu Dhabi & Dubai, UAE",
-      stats: "Community Regeneration | Commercial Masterworks",
+      period: "2025",
+      title: "RETAIL CONCEPTUAL DESIGNER",
+      location: "",
+      stats: "",
     },
     {
-      period: "2022 - 2023",
-      title: "Architectural Designer & Technical Lead",
-      location: "Dubai, UAE",
-      stats: "200,000+ Sq.ft | AutoCAD & Fine Spatial Detailing",
+      period: "2023 - 2024",
+      title: "JUNIOR ARCHITECT",
+      location: "",
+      stats: " ",
     }
   ];
 
   return (
     <section
       id="timeline"
-      className="relative w-full py-24 md:py-32 text-neutral-800 z-10 bg-[#FAF9F5] border-t border-neutral-200/60 overflow-hidden"
+      className="relative w-full py-8 text-neutral-800 z-10 bg-[#FAF9F5] border-t border-neutral-200/60 overflow-hidden"
     >
       {/* Visual Background Blueprint System & Fine Grid Lines (same as CV) */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.06] select-none z-0">
@@ -41,14 +41,14 @@ export default function Timeline() {
               05 / CHRONOLOGICAL EXPANSION
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
-              THE HISTORIC TIMELINE
+        TIMELINE
             </h2>
           </div>
 
           {/* RIGHT AREA: Chronological track */}
-          <div className="lg:col-span-8 space-y-10">
+          <div className="lg:col-span-8 space-y-3">
             {/* Timeline container with vertical gold line path */}
-            <div className="relative border-l border-[#C5A059]/35 pl-6 ml-4 space-y-16">
+            <div className="relative border-l border-[#C5A059]/35 pl-6 ml-4 space-y-4">
               {CAREER_TIMELINE.map((item, idx) => (
                 <motion.div 
                   key={idx} 
@@ -61,7 +61,7 @@ export default function Timeline() {
                   {/* Timeline diamond point (matching CV design) */}
                   <div className="absolute -left-[31px] top-1.5 w-4 h-4 bg-[#FAF9F5] border-2 border-[#C5A059] rounded-none rotate-45 group-hover:bg-[#C5A059] group-hover:rotate-[135deg] transition-all duration-500 ease-out" />
                   
-                  <div className="space-y-4">
+                  <div className="space-y-1.5">
                     {/* Period and Stats header */}
                     <div className="flex flex-wrap items-center justify-between gap-2.5">
                       <span className="font-mono text-[10px] tracking-widest text-[#B28B45] font-bold block uppercase bg-[#C5A059]/10 px-3 py-1">
