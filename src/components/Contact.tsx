@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full py-24 md:py-36 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
+      className="relative w-full py-12 md:py-16 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
     >
       {/* Dynamic light highlight glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
@@ -19,7 +19,7 @@ export default function Contact() {
               07 / SECURE THE COLLABORATION
             </span>
             <h2 className="font-serif text-3xl md:text-5xl text-luxury-text font-extralight tracking-tight uppercase leading-tight">
-              LET'S CREATE SOMETHING EXCEPTIONAL
+              THANK YOU , LOOKING FORWARD TO WORK WITH YOU
             </h2>
             <p className="font-sans text-xs text-neutral-400 font-light leading-relaxed max-w-sm">
               Get in touch for flagship retail design collaborations, boutique commercial interiors, or advanced parametric spatial workflows.
@@ -50,12 +50,12 @@ export default function Contact() {
                       DIRECT INQUIRY
                     </span>
                     <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
-                      STUDIO CONTACT
+                    AKASH SUNDHAKAR
                     </h3>
                   </div>
                   {/* Fine logo graphic */}
                   <div className="border border-[#C5A059]/20 p-1 bg-neutral-50 group-hover:border-[#C5A059]/50 transition-colors">
-                    <span className="font-serif text-xs text-[#C5A059] font-bold tracking-widest">A</span>
+                    <span className="font-serif text-xs text-[#C5A059] font-bold tracking-widest">AS</span>
                   </div>
                 </div>
 
@@ -63,10 +63,10 @@ export default function Contact() {
                 <div className="space-y-3 pt-2 text-[11px]">
                   
                   {/* Name detail card */}
-                  <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
+                  {/* <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">NAME</span>
-                    <span className="font-serif text-sm text-neutral-900 font-light tracking-wide uppercase">AJAY</span>
-                  </div>
+                    <span className="font-serif text-sm text-neutral-905 font-light tracking-wide uppercase">AJAY</span>
+                  </div> */}
 
                   {/* Phone detail card */}
                   <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
@@ -79,8 +79,8 @@ export default function Contact() {
                   {/* Email detail card */}
                   <div className="flex justify-between items-center pb-1">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
-                    <a href="mailto:infaazmk@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
-                      infaazmk@gmail.com
+                    <a href="mailto:akashsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
+                      akashsudhakar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -91,39 +91,36 @@ export default function Contact() {
                     CONNECTED PORTALS
                   </span>
                   
-                  <div className="flex gap-3 justify-start sm:justify-start">
-                    {/* WhatsApp Action - Vibrant WhatsApp Green */}
+                  <div className="flex gap-4 justify-start">
+                    {/* WhatsApp Action */}
                     <a 
                       href="https://wa.me/971501234567" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3.5 py-2 bg-[#25D366] hover:bg-[#20bd59] text-white rounded-lg text-[11px] font-sans font-bold shadow-md shadow-[#25D366]/10 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#25D366] hover:border-[#25D366] rounded-full transition-all duration-300"
                       title="Connect on WhatsApp"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 stroke-[2.5]" />
-                      <span>WHATSAPP</span>
+                      <MessageCircle className="w-5 h-5 stroke-[1.5]" />
                     </a>
 
-                    {/* LinkedIn Action - Professional LinkedIn Blue */}
+                    {/* LinkedIn Action */}
                     <a 
                       href="https://linkedin.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-3.5 py-2 bg-[#0A66C2] hover:bg-[#0855a2] text-white rounded-lg text-[11px] font-sans font-bold shadow-md shadow-[#0A66C2]/15 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#0A66C2] hover:border-[#0A66C2] rounded-full transition-all duration-300"
                       title="Connect on LinkedIn"
                     >
-                      <Linkedin className="w-3.5 h-3.5 fill-current stroke-none" />
-                      <span>LINKEDIN</span>
+                      <Linkedin className="w-5 h-5 fill-current" />
                     </a>
 
-                    {/* Email Action - Dynamic Gmail Red */}
+                    {/* Email Action */}
                     <a 
-                      href="mailto:infaazmk@gmail.com" 
-                      className="flex items-center gap-2 px-3.5 py-2 bg-[#EA4335] hover:bg-[#d6382a] text-white rounded-lg text-[11px] font-sans font-bold shadow-md shadow-[#EA4335]/15 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+                      href="mailto:akashsudhakar@gmail.com" 
+                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
                       title="Send Email"
                     >
-                      <Mail className="w-3.5 h-3.5 stroke-[2.5]" />
-                      <span>EMAIL</span>
+                      <Mail className="w-5 h-5 stroke-[1.5]" />
                     </a>
                   </div>
                 </div>
