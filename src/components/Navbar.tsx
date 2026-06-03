@@ -54,11 +54,13 @@ export default function Navbar({
       <header
         id="luxury-navbar"
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
-          isScrolledOrCV && !mobileMenuOpen
-            ? "bg-white/95 backdrop-blur-md py-4 shadow-lg border-b border-gray-100"
-            : "bg-transparent py-6 border-b border-white/10"
+          mobileMenuOpen
+            ? "bg-[#050505]/98 py-6 border-b border-white/10"
+            : isScrolledOrCV
+              ? "bg-white/95 backdrop-blur-md py-4 shadow-lg border-b border-gray-100"
+              : "bg-transparent py-6 border-b border-white/10"
         }`}
-        style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
+        style={{ color: (isScrolledOrCV && !mobileMenuOpen) ? "#050505" : "#ffffff" }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
@@ -70,14 +72,13 @@ export default function Navbar({
               className="font-serif tracking-[0.3em] text-xl font-bold transition-colors duration-300"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
             >
-              BINGHATTI
+              AS
             </span>
-            <span className="w-1.5 h-1.5 bg-gold rounded-full group-hover:scale-150 transition-transform duration-300"></span>
             <span
-              className="text-[8px] font-mono tracking-widest uppercase hidden sm:inline-block transition-colors duration-300"
+              className="text-[8px] font-mono tracking-widest uppercase hidden sm:inline-block transition-colors duration-300 animate-pulse ml-2"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#6b7280" : "rgba(255,255,255,0.6)" }}
             >
-              Elite Living
+            ARCHITUCTUR 
             </span>
           </button>
 
@@ -86,7 +87,7 @@ export default function Navbar({
             {[
               { label: "HOME", id: "hero" },
               { label: "ABOUT", id: "about" },
-              { label: "PROJECTS", id: "projects" },
+              { label: "PROJECTS", id: "projectss" },
               { label: "CV", id: "cv" },
               { label: "CONTACT", id: "contact" },
             ].map((link) => (
@@ -101,8 +102,6 @@ export default function Navbar({
               </button>
             ))}
           </nav>
-
-
 
           {/* Mobile Action Controls */}
           <div className="flex items-center md:hidden">
@@ -130,7 +129,8 @@ export default function Navbar({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/95 z-40 md:hidden flex flex-col justify-center items-center"
+            className="fixed inset-0 z-40 md:hidden flex flex-col justify-center items-center"
+            style={{ backgroundColor: "rgba(10, 10, 10, 0.98)" }}
           >
             <nav className="flex flex-col items-center space-y-8 mb-12">
               {[
