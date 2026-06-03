@@ -1,6 +1,6 @@
 import { useState, useMemo, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, ArrowUpRight, Shield, Award, MapPin, BadgeDollarSign, CalendarDays, Code, Copy, Check, FolderPlus, UploadCloud } from "lucide-react";
+import { ArrowLeft, Shield, Award, MapPin, Code, Copy, Check, FolderPlus, UploadCloud } from "lucide-react";
 import { PROJECTS, Project } from "../data";
 
 interface AllProjectsProps {
@@ -21,7 +21,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
   const [copiedProject, setCopiedProject] = useState(false);
 
   // Form states for local source code addition helper
-  const [devTitle, setDevTitle] = useState("Binghatti Sky Mansion");
+  const [devTitle, setDevTitle] = useState("ARCHITECTURE Sky Mansion");
   const [devSubtitle, setDevSubtitle] = useState("High-Rise Geometric Sculptures");
   const [devLocation, setDevLocation] = useState("Downtown Dubai");
   const [devCategory, setDevCategory] = useState("Hyper-Tower");
@@ -106,7 +106,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
   };
 
   return (
-    <div className="min-h-screen bg-luxury-black text-white pt-32 pb-24 relative w-full overflow-x-hidden">
+    <div className="min-h-screen bg-luxury-black text-white pt-16 pb-14 relative w-full overflow-x-hidden">
       {/* Decorative ambient background glows */}
       <div className="absolute top-[10%] left-[-10%] w-96 h-96 bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-[30%] right-[-10%] w-96 h-96 bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
@@ -123,32 +123,22 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
               <span>BACK TO HOME</span>
             </button>
-
-            <button
-              onClick={() => setShowDevGuide(true)}
-              className="group flex items-center space-x-2 text-[10px] font-mono tracking-[0.25em] text-white hover:text-gold uppercase transition-all duration-300 cursor-pointer focus:outline-none border border-white/10 hover:border-gold/30 px-3.5 py-1.5 bg-white/5 rounded-none"
-            >
-              <Code className="w-3.5 h-3.5 text-gold shrink-0" />
-              <span>ADD TO SOURCE CODE HELPER</span>
-            </button>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4">
               <span className="font-mono text-[10px] tracking-[0.4em] text-gold uppercase font-bold block">
-                BINGHATTI ARCHITECTURAL ARCHIVE
+                ARCHITECTURE ARCHITECTURAL ARCHIVE
               </span>
               <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight text-white uppercase leading-none">
                 COMPLETE <span className="font-sans font-semibold text-gold italic">PORTFOLIO</span>
               </h1>
             </div>
             <p className="text-gray-400 font-sans font-light text-sm max-w-md leading-relaxed">
-              Explore our full collection of iconic residential developments, defining a hyper-luxury standard of living throughout Dubai's prime locations.
+              
             </p>
           </div>
         </div>
-
-
 
         {/* Symmetrical Results Count */}
         <div className="flex justify-between items-center text-xs font-mono tracking-widest text-white/40 uppercase mb-8 border-b border-white/5 pb-4">
@@ -172,102 +162,160 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project: Project, idx) => {
-                const isActive = activeTouchId === project.id;
-                const isLeft = idx % 2 === 0;
-                return (
-                  <motion.div
-                    layout
-                    initial={{
-                      opacity: 0,
-                      y: 45
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0
-                    }}
-                    exit={{ opacity: 0, y: 30 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{
-                      duration: 0.8,
-                      ease: [0.16, 1, 0.3, 1],
-                      delay: (idx % 3) * 0.08
-                    }}
-                    key={project.id}
-                    onClick={() => handleCardTouch(project.id)}
-                    className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
-                      isActive
-                        ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
-                        : "bg-luxury-dark/95 border-white/5 hover:border-gold/30"
-                    }`}
-                  >
-                    <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={`${project.title}`}
-                        referrerPolicy="no-referrer"
-                        className={`w-full h-full object-cover transition-transform duration-[1.2s] ease-out filter brightness-95 ${
-                          isActive ? "scale-105" : "group-hover:scale-105"
-                        }`}
-                      />
-
-                      {/* Luxury badge depending on class */}
-                      <div className="absolute top-4 right-4 z-20">
-                        <div className="w-8 h-8 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-gold">
-                          {["bugatti", "jacob", "mercedes", "phantom", "galaxy"].includes(project.id) ? (
-                            <Award className="w-4 h-4 animate-pulse" />
-                          ) : (
-                            <Shield className="w-4 h-4" />
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content details */}
-                    <div className="p-6 md:p-8 space-y-4 flex-grow flex flex-col justify-between">
-                      <div className="space-y-1">
-                        <h3 className={`font-serif text-xl font-normal transition-colors duration-300 ${
-                          isActive ? "text-gold" : "text-white group-hover:text-gold"
-                        }`}>
-                          {project.title}
-                        </h3>
-                        <p className="font-mono text-[9px] tracking-widest text-black uppercase font-semibold">
-                          {project.subtitle}
-                        </p>
-                      </div>
-
-                      <div className="space-y-4 pt-4 border-t border-white/5">
-                        <div className="flex items-center text-xs text-gray-400 space-x-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-gold/60 shrink-0" />
-                          <span className="font-sans font-light truncate">{project.location}</span>
-                        </div>
-
-                        {/* Interactive Spec tags / Action */}
-                        <div className="flex gap-2 items-center justify-between pt-2">
-                          <span className="text-[9px] font-mono text-white/45 tracking-widest uppercase">
-                            PLAN: {project.paymentPlan}
-                          </span>
-                          
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation(); // Avoid triggering the parent touch toggle
-                              setInquireProject(project);
+          <div className="space-y-12">
+            {/* Main Projects Section */}
+            {filteredProjects.filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id)).length > 0 && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+                  <AnimatePresence mode="popLayout">
+                    {filteredProjects
+                      .filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
+                      .map((project: Project, idx) => {
+                        const isActive = activeTouchId === project.id;
+                        return (
+                          <motion.div
+                            layout
+                            initial={{
+                              opacity: 0,
+                              y: 35
                             }}
-                            className={`px-4 py-2 font-mono text-[9px] tracking-widest uppercase border bg-transparent transition-all duration-300 cursor-pointer ${
-                              isActive ? "border-gold text-gold scale-105" : "border-white/10 hover:border-gold text-white hover:text-gold"
+                            whileInView={{
+                              opacity: 1,
+                              y: 0
+                            }}
+                            exit={{ opacity: 0, y: 20 }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{
+                              duration: 0.6,
+                              ease: [0.16, 1, 0.3, 1],
+                              delay: (idx % 4) * 0.05
+                            }}
+                            key={project.id}
+                            onClick={() => handleCardTouch(project.id)}
+                            className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
+                              isActive
+                                ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
+                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30"
                             }`}
                           >
-                            INQUIRE NOW
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
+                            <div className="relative w-full h-[150px] sm:h-[180px] md:h-[220px] overflow-hidden">
+                              <img
+                                src={project.image}
+                                alt={`${project.title}`}
+                                referrerPolicy="no-referrer"
+                                className={`w-full h-full object-cover transition-transform duration-[1.2s] ease-out filter brightness-95 ${
+                                  isActive ? "scale-105" : "group-hover:scale-105"
+                                }`}
+                              />
+
+                              {/* Luxury badge depending on class */}
+                              <div className="absolute top-3 right-3 z-20">
+                                <div className="w-6 h-6 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-gold">
+                                  <Shield className="w-3 h-3" />
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Content details */}
+                            <div className="p-3.5 sm:p-5 space-y-1 flex-grow flex flex-col justify-center">
+                              <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
+                                isActive ? "text-gold" : "text-white group-hover:text-gold"
+                              }`}>
+                                {project.title}
+                              </h3>
+                              <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
+                                {project.subtitle}
+                              </p>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                  </AnimatePresence>
+                </div>
+              </div>
+            )}
+
+            {/* AI Concept Exploration Section Header */}
+            {filteredProjects.filter(p => !["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id)).length > 0 && (
+              <div className="space-y-6 pt-10 border-t border-white/10">
+                <div className="space-y-1.5 text-left">
+                  <span className="font-mono text-[9px] tracking-[0.35em] text-gold uppercase font-bold block">
+                    PARAMETRIC IMAGINATIONS
+                  </span>
+                  <h2 className="font-serif text-2xl md:text-3xl font-light text-white uppercase tracking-wider">
+                    AI Concept Exploration
+                  </h2>
+                  <div className="w-16 h-0.5 bg-gold mt-2" />
+                </div>
+
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+                  <AnimatePresence mode="popLayout">
+                    {filteredProjects
+                      .filter(p => !["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
+                      .map((project: Project, idx) => {
+                        const isActive = activeTouchId === project.id;
+                        return (
+                          <motion.div
+                            layout
+                            initial={{
+                              opacity: 0,
+                              y: 35
+                            }}
+                            whileInView={{
+                              opacity: 1,
+                              y: 0
+                            }}
+                            exit={{ opacity: 0, y: 20 }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{
+                              duration: 0.6,
+                              ease: [0.16, 1, 0.3, 1],
+                              delay: (idx % 4) * 0.05
+                            }}
+                            key={project.id}
+                            onClick={() => handleCardTouch(project.id)}
+                            className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
+                              isActive
+                                ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
+                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30"
+                            }`}
+                          >
+                            <div className="relative w-full h-[150px] sm:h-[180px] md:h-[220px] overflow-hidden">
+                              <img
+                                src={project.image}
+                                alt={`${project.title}`}
+                                referrerPolicy="no-referrer"
+                                className={`w-full h-full object-cover transition-transform duration-[1.2s] ease-out filter brightness-95 ${
+                                  isActive ? "scale-105" : "group-hover:scale-105"
+                                }`}
+                              />
+
+                              {/* Award icon badge for concept visual */}
+                              <div className="absolute top-3 right-3 z-20">
+                                <div className="w-6 h-6 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-gold">
+                                  <Award className="w-3 h-3 animate-pulse" />
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Content details */}
+                            <div className="p-3.5 sm:p-5 space-y-1 flex-grow flex flex-col justify-center">
+                              <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
+                                isActive ? "text-gold" : "text-white group-hover:text-gold"
+                              }`}>
+                                {project.title}
+                              </h3>
+                              <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
+                                {project.subtitle}
+                              </p>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                  </AnimatePresence>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -302,7 +350,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                   </div>
                   <h4 className="font-serif text-xl text-gold uppercase">Inquiry Transmitted Successfully</h4>
                   <p className="text-xs font-sans text-gray-400 max-w-sm mx-auto">
-                    A Binghatti VIP Portfolio Manager will contact you shortly to present full architectural plans and unit layouts.
+                    A ARCHITECTURE VIP Portfolio Manager will contact you shortly to present full architectural plans and unit layouts.
                   </p>
                 </div>
               ) : (
@@ -422,7 +470,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
 
                   {/* Subtitle */}
                   <div className="space-y-1">
-                    <label className="text-[9px] font-mono tracking-widest uppercase text-black">SUBTITLE / COLLABORATOR</label>
+                    <label className="text-[9px] font-mono tracking-widest uppercase text-gold">SUBTITLE / COLLABORATOR</label>
                     <input
                       required
                       type="text"
