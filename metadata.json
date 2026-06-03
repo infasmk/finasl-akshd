@@ -1,0 +1,6 @@
+{
+  "name": "Binghatti Luxury Residences",
+  "description": "Premium luxury real-estate landing website inspired by Binghatti with smooth animations, immersive transitions, and responsive sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

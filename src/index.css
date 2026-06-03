@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@250;300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --luxury-black: #050505;
+  --luxury-dark: #0a0a0a;
+  --luxury-gray: #121212;
+  --luxury-text: #ffffff;
+  --luxury-muted: #d1d5db;
+  --luxury-muted-heavy: #9ca3af;
+  --luxury-border: rgba(255, 255, 255, 0.08);
+  --luxury-glass: rgba(255, 255, 255, 0.05);
+  --luxury-glass-border: rgba(255, 255, 255, 0.12);
+}
+
+html.light-theme {
+  --luxury-black: #faf9f6; /* High-Contrast Alabaster / Chalk white */
+  --luxury-dark: #ffffff;
+  --luxury-gray: #f4f3ef;
+  --luxury-text: #050505;
+  --luxury-muted: #2c2a29;
+  --luxury-muted-heavy: #4a4846;
+  --luxury-border: rgba(0, 0, 0, 0.08);
+  --luxury-glass: rgba(0, 0, 0, 0.03);
+  --luxury-glass-border: rgba(0, 0, 0, 0.1);
+}
+
+@theme {
+  --font-serif: "Georgia", "Cormorant Garamond", serif;
+  --font-sans: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-gold: #C5A059;
+  --color-gold-hover: #B08E4B;
+  --color-gold-light: #dec79b;
+  --color-luxury-black: var(--luxury-black);
+  --color-luxury-dark: var(--luxury-dark);
+  --color-luxury-gray: var(--luxury-gray);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--luxury-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08E4B;
+}
+
+/* Smooth HTML scroll */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--luxury-black);
+  color: var(--luxury-text);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--luxury-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--luxury-glass-border);
+}
+
+.glass-panel-dark {
+  background: rgba(5, 5, 5, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.light-theme .glass-panel-dark {
+  background: rgba(250, 249, 246, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+html.light-theme .glass-panel-light {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Luxury card glows */
+.gold-glow {
+  box-shadow: 0 0 35px rgba(197, 160, 89, 0.08);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(197, 160, 89, 0.35);
+}
+
+/* Standard utility class overrides for clean seamless switching */
+html.light-theme .text-white {
+  color: #050505 !important;
+}
+
+html.light-theme .text-gray-300 {
+  color: #2c2a29 !important;
+}
+
+html.light-theme .text-gray-400 {
+  color: #4a4846 !important;
+}
+
+html.light-theme .text-white\/85 {
+  color: rgba(5, 5, 5, 0.85) !important;
+}
+
+html.light-theme .text-white\/60 {
+  color: rgba(5, 5, 5, 0.6) !important;
+}
+
+html.light-theme .text-white\/50 {
+  color: rgba(5, 5, 5, 0.5) !important;
+}
+
+html.light-theme .text-white\/40 {
+  color: rgba(5, 5, 5, 0.4) !important;
+}
+
+html.light-theme .text-white\/30 {
+  color: rgba(5, 5, 5, 0.3) !important;
+}
+
+html.light-theme .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light-theme .border-white\/15 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+html.light-theme .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-theme .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+html.light-theme .bg-black\/60 {
+  background-color: rgba(250, 249, 246, 0.88) !important;
+}
+
+html.light-theme .bg-black\/95 {
+  background-color: rgba(250, 249, 246, 0.98) !important;
+}
+
+html.light-theme .bg-luxury-dark\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html.light-theme .bg-luxury-dark\/60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Ensure Contact section form and card text stays readable in signature light-theme mode */
+html.light-theme #contact .text-luxury-black,
+html.light-theme #contact h3,
+html.light-theme #contact label,
+html.light-theme #contact input,
+html.light-theme #contact select,
+html.light-theme #contact textarea {
+  color: #050505 !important;
+}
+
+html.light-theme #contact input::placeholder,
+html.light-theme #contact select::placeholder {
+  color: #7a7876 !important;
+}
+
+html.light-theme #contact select option {
+  background-color: #ffffff !important;
+  color: #050505 !important;
+}
+
+html.light-theme .divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Avoid color inversion inside footer when in light theme to keep elegant contrast */
+html.light-theme footer {
+  background-color: #050505 !important;
+  color: #ffffff !important;
+}
+html.light-theme footer .text-white,
+html.light-theme footer h3,
+html.light-theme footer p,
+html.light-theme footer input {
+  color: #ffffff !important;
+}
+html.light-theme footer .text-white\/30 {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+html.light-theme footer .text-white\/40 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+html.light-theme footer .text-white\/50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+html.light-theme footer .text-white\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+html.light-theme footer .text-white\/85 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+html.light-theme footer .text-white\/90 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+html.light-theme footer .text-gray-300 {
+  color: #d1d5db !important;
+}
+html.light-theme footer .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+html.light-theme footer .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+html.light-theme footer .border-white\/5 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+html.light-theme footer .bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+html.light-theme footer .bg-luxury-gray\/30 {
+  background-color: rgba(18, 18, 18, 0.3) !important;
+}
+html.light-theme footer .bg-gold\/5 {
+  background-color: rgba(197, 160, 89, 0.05) !important;
+}
+html.light-theme footer input::placeholder {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Avoid color inversion inside Brand Marquee when in light theme to ensure premium high-contrast display */
+html.light-theme .brand-marquee-block {
+  background-color: #050505 !important;
+  border-top-color: rgba(255, 255, 255, 0.05) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+}
+html.light-theme .brand-marquee-block svg,
+html.light-theme .brand-marquee-block .text-white\/35 {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+html.light-theme .brand-marquee-block .group:hover svg,
+html.light-theme .brand-marquee-block .group:hover .group-hover\:text-gold {
+  color: #C5A059 !important;
+}
+html.light-theme .brand-marquee-block .text-white\/50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+html.light-theme .brand-marquee-block .group:hover .group-hover\:text-white {
+  color: #ffffff !important;
+}
+html.light-theme .brand-marquee-block .text-gold\/30 {
+  color: rgba(197, 160, 89, 0.35) !important;
+}
+html.light-theme .brand-marquee-block .group:hover .group-hover\:text-gold\/80 {
+  color: rgba(197, 160, 89, 0.8) !important;
+}
+html.light-theme .brand-marquee-block span.text-gold {
+  color: #C5A059 !important;
+}
+
+/* Avoid color inversion inside Hero when in light theme to keep elegant contrast on the dark skyline background */
+html.light-theme #hero {
+  color: #ffffff !important;
+}
+html.light-theme #hero h1,
+html.light-theme #hero h2,
+html.light-theme #hero p,
+html.light-theme #hero span:not(.text-gold) {
+  color: #ffffff !important;
+}
+html.light-theme #hero .text-gray-300 {
+  color: #d1d5db !important;
+}
+html.light-theme #hero .text-white\/50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+html.light-theme #hero .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Prevent color inversion inside the dark project image hover details overlay in light-theme mode */
+html.light-theme .project-hover-overlay {
+  color: #ffffff !important;
+}
+html.light-theme .project-hover-overlay .text-white,
+html.light-theme .project-hover-overlay p,
+html.light-theme .project-hover-overlay p.text-white,
+html.light-theme .project-hover-overlay span:not(.text-gold) {
+  color: #ffffff !important;
+}
+html.light-theme .project-hover-overlay .text-gray-400 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+html.light-theme .project-hover-overlay span.text-gold {
+  color: #C5A059 !important;
+}
+
+/* Simple keyframe utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Custom premium blurred orbs transitions */
+@keyframes luxury-orb-1 {
+  0% {
+    transform: translate(0px, 0px) scale(1.0);
+  }
+  33% {
+    transform: translate(8%, 12%) scale(1.15);
+  }
+  66% {
+    transform: translate(-10%, -6%) scale(0.92);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1.0);
+  }
+}
+
+@keyframes luxury-orb-2 {
+  0% {
+    transform: translate(0px, 0px) scale(1.1);
+  }
+  50% {
+    transform: translate(-15%, 8%) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1.1);
+  }
+}
+
+@keyframes luxury-orb-3 {
+  0% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+  40% {
+    transform: translate(12%, -15%) scale(1.12);
+  }
+  80% {
+    transform: translate(-6%, 10%) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+}
+
+.animate-luxury-orb-1 {
+  animation: luxury-orb-1 25s ease-in-out infinite;
+}
+
+.animate-luxury-orb-2 {
+  animation: luxury-orb-2 18s ease-in-out infinite;
+}
+
+.animate-luxury-orb-3 {
+  animation: luxury-orb-3 22s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Milestones Register Button with 3D tactile effect & Elegant Off-White Tone */
+.milestones-register-btn {
+  background-color: #faf9f5 !important;
+  color: #050505 !important;
+  border-bottom: 4px solid #dcd9d0 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.milestones-register-btn:hover {
+  background-color: #f3f0e8 !important;
+  border-bottom: 4px solid #ccc9be !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2) !important;
+}
+
+.milestones-register-btn:active {
+  border-bottom: 0px solid transparent !important;
+  transform: translateY(2px) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Light Theme adjustments for the milestones button to contrast against pure white backgrounds */
+html.light-theme .milestones-register-btn {
+  background-color: #f2efea !important; /* Elegant luxury off-white limestone tone */
+  color: #050505 !important;
+  border-bottom: 4px solid #ccc8ba !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light-theme .milestones-register-btn:hover {
+  background-color: #eae6df !important;
+  border-bottom: 4px solid #b8b2a2 !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+

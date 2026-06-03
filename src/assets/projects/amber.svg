@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAE1B8"/>
+      <stop offset="100%" stop-color="#8c6D34"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-grad)"/>
+
+  <!-- Binghatti Amber (Warm golden cubicle tower blocks) -->
+  <g stroke="url(#gold-grad)" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.8">
+    <rect x="320" y="250" width="160" height="250" opacity="0.8"/>
+    <rect x="350" y="160" width="100" height="90" opacity="0.6"/>
+    <!-- Overlap effect -->
+    <path d="M 300 300 L 350 210 M 500 300 L 450 210 M 350 250 L 450 250" opacity="0.5"/>
+  </g>
+
+  <line x1="50" y1="500" x2="750" y2="500" stroke="#C5A059" stroke-width="2" opacity="0.8"/>
+
+  <g fill="#FAE1B8" font-family="monospace" opacity="0.75">
+    <text x="60" y="540" font-size="11" letter-spacing="1.5">BINGHATTI AMBER // FAÇADE RENDERING</text>
+    <text x="60" y="560" font-size="9" opacity="0.5">LOCATION: JVC DUBAI // COMFORT EMBEZZLED GOLDEN RESIDENCES</text>
+    <text x="740" y="545" font-size="14" font-weight="bold" text-anchor="end">TYPE: EXCLUSIVE COMMUNITY</text>
+  </g>
+</svg>
