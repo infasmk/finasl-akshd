@@ -16,7 +16,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
     <section
       ref={sectionRef}
       id="projects"
-      className="relative w-full py-24 md:py-32 bg-luxury-black text-white border-b border-white/5"
+      className="relative w-full py-12 md:py-16 bg-luxury-black text-white border-b border-white/5"
     >
       {/* Absolute floating lights */}
       <div className="absolute top-[20%] right-[-15%] w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
@@ -25,19 +25,22 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header containing title and buttons */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
           <div className="space-y-4">
             <span className="font-mono text-[10px] tracking-[0.3em] text-gold uppercase font-bold block">
               PORTFOLIO SHOWCASE
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight text-white uppercase">
               REVOLUTIONARY <br className="hidden sm:block" />
-              <span className="font-sans font-semibold text-gold italic tracking-wide">PROJECTS GRID</span>
+              <span className="font-sans font-semibold text-gold italic tracking-wide">PROJECTS</span>
             </h2>
+            <p className="font-sans font-light text-xs sm:text-sm text-gray-400 max-w-lg leading-relaxed uppercase tracking-wider">
+              Explore our curated selection of retail concept layouts, photorealistic 3D modeling, and premium commercial interior spaces.
+            </p>
           </div>
 
           <div className="text-left md:text-right font-mono text-[11px] tracking-widest text-white/50 max-w-xs uppercase">
-            [ Bespoke collaborations with premium brands merging automotive precision & haute horology ]
+            
           </div>
         </div>
 
@@ -48,7 +51,6 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
         >
           {PROJECTS.slice(0, 6).map((project: Project, idx) => {
             const isActive = activeTouchId === project.id;
-            const isLeft = idx % 2 === 0;
             return (
               <motion.div
                 key={project.id}
@@ -106,7 +108,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
                     }`}>
                       {project.title}
                     </h3>
-                    <p className="font-mono text-[9px] tracking-widest text-black uppercase font-semibold">
+                    <p className="font-mono text-[10px] tracking-[0.25em] text-[#B28B45] uppercase font-semibold">
                       {project.subtitle}
                     </p>
                   </div>
