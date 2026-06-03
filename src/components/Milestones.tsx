@@ -49,17 +49,10 @@ function CountingNumber({ value, suffix }: { value: number; suffix: string }) {
 export default function Milestones() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const scrollToContact = () => {
-    const el = document.getElementById("contact");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-24 md:py-32 bg-luxury-dark text-white overflow-hidden border-b border-white/5"
+      className="relative w-full py-8 bg-luxury-dark text-white overflow-hidden border-b border-white/5"
     >
       {/* Background graphic elements */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
@@ -68,7 +61,7 @@ export default function Milestones() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
         
         {/* Section Heading */}
-        <div className="space-y-4 mb-20 md:mb-24">
+        <div className="space-y-2 mb-4">
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,11 +82,11 @@ export default function Milestones() {
             MILESTONES
           </motion.h2>
 
-          <div className="w-12 h-0.5 bg-gold mx-auto mt-6" />
+          <div className="w-12 h-0.5 bg-gold mx-auto mt-2" />
         </div>
 
         {/* 3 Animated Counters Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
           {MILESTONES.map((milestone: MilestoneType, index: number) => (
             <motion.div
               key={milestone.id}
@@ -101,7 +94,7 @@ export default function Milestones() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -20px 0px" }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="group space-y-3 p-8 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-gold/30 transition-all duration-500 rounded-none relative"
+              className="group space-y-2 p-5 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-gold/30 transition-all duration-500 rounded-none relative"
             >
               {/* Corner Accent for luxury feel */}
               <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-gold/40 group-hover:border-gold transition-colors" />
@@ -121,7 +114,6 @@ export default function Milestones() {
             </motion.div>
           ))}
         </div>
-
 
       </div>
     </section>
