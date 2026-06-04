@@ -422,7 +422,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
         </section>
 
-        {/* CLIENTS & BRANDS SECTION */}
+   {/* CLIENTS & BRANDS SECTION */}
         <section id="cv-brands" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
@@ -438,11 +438,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               {BRANDS.map((brand, bIdx) => (
                 <div
                   key={bIdx}
-                  className="relative group bg-white border border-neutral-200/80 hover:border-[#C5A059]/30 hover:shadow-md hover:shadow-neutral-100 p-6 flex flex-col justify-center items-center h-28 text-center transition-all duration-300 cursor-default overflow-hidden"
+                  className="relative group p-6 flex flex-col justify-center items-center h-28 text-center transition-all duration-300 cursor-default overflow-hidden"
                 >
-                  {/* Glowing Accent line inside cards */}
-                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C5A059]/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-
                   <div className="z-10 group-hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center">
                     {brand.logo ? (
                       <img
@@ -455,9 +452,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                       <div className="flex flex-col items-center justify-center p-2 text-center">
                         <span className="font-serif text-xs min-h-[14px] font-medium text-neutral-800 uppercase tracking-widest leading-none">
                           {brand.name}
-                        </span>
-                        <span className="text-[7px] font-mono tracking-widest text-[#B28B45]/60 uppercase mt-2.5 select-none hover:text-[#B28B45] transition-colors">
-                          + ADD LOGO
                         </span>
                       </div>
                     )}
@@ -473,6 +467,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
             </div>
           </div>
         </section>
+
 
         {/* RESPONSIBILITIES & TRAINEE EXPERIENCE SECTION */}
         <section id="cv-responsibilities" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
