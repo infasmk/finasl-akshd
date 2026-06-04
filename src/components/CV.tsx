@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import brand1 from "@/src/assets/projects/1.jpg";
+import brand2 from "@/src/assets/projects/2.png";
+import brand3 from "@/src/assets/projects/3.jpg";
+import brand4 from "@/src/assets/projects/4.jpg";
+import brand5 from "@/src/assets/projects/5.png";
+import brand6 from "@/src/assets/projects/6.png";
+import brand7 from "@/src/assets/projects/7.jpg";
+import brand8 from "@/src/assets/projects/8.png";
+import brand9 from "@/src/assets/projects/9.jpg";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
   Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
@@ -252,17 +261,15 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
   // BRAND LISTING: Easily swap logos by adding local paths or raw GitHub image URLs to the 'logo' property below.
   const BRANDS = [
-    { name: "Adidas", logo: "", category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
-    { name: "Al Futtaim", logo: "", category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
-    { name: "Aldar", logo: "", category: "Community Renewal & Urban Regeneration Projects", type: "COMMERCIAL MASTER" },
-    { name: "Sephora", logo: "", category: "Luxury Cosmetic Boutiques & High-Traffic Retail", type: "RETAIL ENVIRONMENT" },
-    { name: "Radisson", logo: "", category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
-    { name: "ON", logo: "", category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
-    { name: "Seiko", logo: "", category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
-    { name: "Wasl", logo: "", category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
-    { name: "La Marquise", logo: "", category: "Boutique Fine Jewellery Concept Outlets", type: "RETAIL ENVIRONMENT" },
-    { name: "Mumuso", logo: "", category: "High-Density Lifestyle Retail Layouts", type: "RETAIL ENVIRONMENT" },
-    { name: "Bueno", logo: "", category: "Artisanal Casual F&B Cafes & Bistros", type: "COMMERCIAL MASTER" }
+    { name: "Adidas", logo: brand1, category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
+    { name: "Al Futtaim", logo: brand2, category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
+    { name: "Aldar", logo: brand3, category: "Community Renewal & Urban Regeneration Projects", type: "COMMERCIAL MASTER" },
+    { name: "Sephora", logo: brand4, category: "Luxury Cosmetic Boutiques & High-Traffic Retail", type: "RETAIL ENVIRONMENT" },
+    { name: "Radisson", logo: brand5, category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
+    { name: "ON", logo: brand6, category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
+    { name: "Seiko", logo: brand7, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
+    { name: "Wasl", logo: brand8, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
+    { name: "La Marquise", logo: brand9, category: "Boutique Fine Jewellery Concept Outlets", type: "RETAIL ENVIRONMENT" },
   ];
 
   const SKILLS = [
