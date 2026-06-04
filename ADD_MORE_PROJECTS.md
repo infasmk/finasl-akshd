@@ -1,6 +1,6 @@
 # Developer Guide: How to Add More Projects Locally
 
-This guide explains how to add new luxury real estate projects to the Binghatti Portfolio showcase at the source code level (for local development or git-based deployment like GitHub).
+This guide explains how to add new luxury real estate projects to the ARCHITECTURE Portfolio showcase at the source code level (for local development or git-based deployment like GitHub).
 
 ---
 
@@ -34,8 +34,8 @@ export const PROJECTS: Project[] = [
   // ... existing projects
   {
     id: "signature-tower", // Unique lower-case ID matching no other project
-    title: "Binghatti Signature Tower", // Title of the Residence
-    subtitle: "By Binghatti Premium Development", // Corporate subtitle or designer collaborator
+    title: "ARCHITECTURE Signature Tower", // Title of the Residence
+    subtitle: "By ARCHITECTURE Premium Development", // Corporate subtitle or designer collaborator
     location: "Downtown Dubai", // Location of the project
     image: signatureTowerImg, // The variable imported above representing your local file
     category: "Signature Showcase", // Category tag used for filtering

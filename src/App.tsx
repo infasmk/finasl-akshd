@@ -72,7 +72,7 @@ export default function App() {
                 {/* SECTION 2 — HERO COVER PAGE (fullscreen 100vh) */}
                 <Hero />
 
-                {/* SECTION 4 — ABOUT / WHY BINGHATTI */}
+                {/* SECTION 4 — ABOUT / WHY ARCHITECTURE */}
                 <About />
 
                 {/* SECTION 5 — MILESTONES */}

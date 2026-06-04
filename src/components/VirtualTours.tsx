@@ -20,7 +20,7 @@ const TOUR_ROOMS: TourRoom[] = [
   {
     id: "penthouse",
     name: "ASTRONOMICAL GRAND SALON",
-    project: "BINGHATTI JACOB & CO RESIDENCES",
+    project: "ARCHITECTURE JACOB & CO RESIDENCES",
     backgroundUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=80",
     description: "Soaring 100+ stories above the clouds, featuring crystal chandeliers, Jacob & Co astronomical accents, and double-height custom curved glazing.",
     hotspots: [
@@ -32,7 +32,7 @@ const TOUR_ROOMS: TourRoom[] = [
   {
     id: "bedroom",
     name: "MERCEDES-BENZ MASTER SUITE",
-    project: "BINGHATTI MERCEDES-BENZ PLACES",
+    project: "ARCHITECTURE MERCEDES-BENZ PLACES",
     backgroundUrl: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=2000&q=80",
     description: "Automotive high-performance luxury meets residential architecture. Flowing aerodynamic ceilings, carbon-fibre weaves, and panoramic skyline vistas.",
     hotspots: [
@@ -43,7 +43,7 @@ const TOUR_ROOMS: TourRoom[] = [
   {
     id: "spa",
     name: "HYPERCAR WELLNESS CABIN",
-    project: "BUGATTI RESIDENCES BY BINGHATTI",
+    project: "BUGATTI RESIDENCES BY ARCHITECTURE",
     backgroundUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80",
     description: "Inspired by Molsheim, France. Featuring French Riviera-themed private pools, bespoke carbon water jet therapies, and a private sand-beach sky terrace.",
     hotspots: [
@@ -385,7 +385,7 @@ export default function VirtualTours() {
                   </div>
 
                   <p className="font-sans text-xs text-gray-300 leading-relaxed font-light">
-                    Securing responsive spatial feed. Please mount your Oculus Quest, Apple Vision Pro, or set your high-resolution presentation screen to landscape to synchronize directly with the Binghatti cloud server nodes.
+                    Securing responsive spatial feed. Please mount your Oculus Quest, Apple Vision Pro, or set your high-resolution presentation screen to landscape to synchronize directly with the ARCHITECTURE cloud server nodes.
                   </p>
 
                   <div className="pt-2">

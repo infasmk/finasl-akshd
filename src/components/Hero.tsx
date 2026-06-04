@@ -71,7 +71,7 @@ export default function Hero() {
               className="font-serif text-6xl md:text-8xl lg:text-9xl font-light tracking-[0.05em] leading-none text-white uppercase"
               style={{ color: "#ffffff" }}
             >
-              BINGHATTI
+              ARCHITECTURE
             </motion.h1>
 
             <motion.p

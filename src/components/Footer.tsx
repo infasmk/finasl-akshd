@@ -123,7 +123,7 @@ export default function Footer({
             className="flex items-center space-x-2 group focus:outline-none cursor-pointer"
           >
             <span className="font-serif tracking-[0.45em] text-2xl sm:text-3xl font-bold text-white group-hover:text-gold transition-colors duration-300">
-              BINGHATTI
+              ARCHITECTURE
             </span>
             <span className="w-2 h-2 bg-gold rounded-full group-hover:scale-150 transition-all duration-300"></span>
           </button>
@@ -175,7 +175,7 @@ export default function Footer({
             <span>Appointed Licensed Builder Broker (Dubai Land Dept. RERA #5103)</span>
           </div>
           <p>
-            &copy; {new Date().getFullYear()} BINGHATTI LANDINGS. ALL REAL ESTATE ASSETS SUBJECT TO REGISTRATION OFFERS.
+            &copy; {new Date().getFullYear()} ARCHITECTURE LANDINGS. ALL REAL ESTATE ASSETS SUBJECT TO REGISTRATION OFFERS.
           </p>
         </div>
 

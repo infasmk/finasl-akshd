@@ -24,7 +24,7 @@ export default function About() {
 
           {/* Main Title */}
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight">
-            WHY <span className="font-semibold text-gold font-sans italic tracking-wide">BINGHATTI?</span>
+            WHY <span className="font-semibold text-gold font-sans italic tracking-wide">ARCHITECTURE?</span>
           </h2>
 
           {/* Divider line */}
@@ -33,10 +33,10 @@ export default function About() {
           {/* Conceptual description */}
           <div className="space-y-6 text-gray-300 font-sans font-light text-sm md:text-base leading-relaxed tracking-wide max-w-2xl mx-auto text-center">
             <p>
-              Binghatti is not merely a developer; it is an avant-garde design house rewriting the lifestyle rules of the world's most dynamic metropolis. With a design philosophy centered around bold, heavy-scale geometric architecture, we craft spaces that serve as timeless sculptural monuments on the Dubai skyline.
+              ARCHITECTURE is not merely a developer; it is an avant-garde design house rewriting the lifestyle rules of the world's most dynamic metropolis. With a design philosophy centered around bold, heavy-scale geometric architecture, we craft spaces that serve as timeless sculptural monuments on the Dubai skyline.
             </p>
             <p>
-              By combining high-end industrial engineering with bespoke craftsmanship, every residence is customized down to the finest detail. Driven by the relentless pursuit of artistic distinction and strategic positioning, a Binghatti address acts as an appreciating asset, an engineering marvel, and a badge of pure residential triumph.
+              By combining high-end industrial engineering with bespoke craftsmanship, every residence is customized down to the finest detail. Driven by the relentless pursuit of artistic distinction and strategic positioning, a ARCHITECTURE address acts as an appreciating asset, an engineering marvel, and a badge of pure residential triumph.
             </p>
           </div>
         </motion.div>

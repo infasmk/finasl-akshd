@@ -133,7 +133,7 @@ export const MAP_PINS: LocationPin[] = [
     name: "Business Bay",
     x: 48,
     y: 38,
-    description: "Home to the futuristic Bugatti Residences and custom-designed Burj Binghatti Jacob & Co Residences heightening the canal-front skyline.",
+    description: "Home to the futuristic Bugatti Residences and custom-designed Burj ARCHITECTURE Jacob & Co Residences heightening the canal-front skyline.",
     premiumStatus: "Hyper-Luxury Hub",
   },
   {
@@ -141,7 +141,7 @@ export const MAP_PINS: LocationPin[] = [
     name: "Downtown Dubai",
     x: 52,
     y: 28,
-    description: "Hosting Mercedes-Benz Places by Binghatti, perfectly framed beside the Burj Khalifa with premier unobstructed terrace views.",
+    description: "Hosting Mercedes-Benz Places by ARCHITECTURE, perfectly framed beside the Burj Khalifa with premier unobstructed terrace views.",
     premiumStatus: "Ultra-Premium Signature",
   },
   {
@@ -149,7 +149,7 @@ export const MAP_PINS: LocationPin[] = [
     name: "Jumeirah Village Circle (JVC)",
     x: 28,
     y: 65,
-    description: "Elite boutique towers like Binghatti Onyx, Crest, and Amber, redefining mid-rise architecture with trademark golden structural lines.",
+    description: "Elite boutique towers like ARCHITECTURE Onyx, Crest, and Amber, redefining mid-rise architecture with trademark golden structural lines.",
     premiumStatus: "Premium Residential",
   },
   {

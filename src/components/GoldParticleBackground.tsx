@@ -286,15 +286,15 @@ export default function GoldParticleBackground() {
 
       // 1. Spacing columns out beautifully
       if (isMobile) {
-        buildings.push(generateSkyscraper(totalWidth * 0.15, 65, height * 0.38, "BINGHATTI SCULPT I"));
-        buildings.push(generateSkyscraper(totalWidth * 0.5, 90, height * 0.55, "BINGHATTI TOWER V"));
-        buildings.push(generateSkyscraper(totalWidth * 0.85, 70, height * 0.42, "BINGHATTI SCULPT II"));
+        buildings.push(generateSkyscraper(totalWidth * 0.15, 65, height * 0.38, "ARCHITECTURE SCULPT I"));
+        buildings.push(generateSkyscraper(totalWidth * 0.5, 90, height * 0.55, "ARCHITECTURE TOWER V"));
+        buildings.push(generateSkyscraper(totalWidth * 0.85, 70, height * 0.42, "ARCHITECTURE SCULPT II"));
       } else {
-        buildings.push(generateSkyscraper(totalWidth * 0.12, 100, height * 0.45, "BINGHATTI SHADOW PLATINUM"));
-        buildings.push(generateSkyscraper(totalWidth * 0.32, 120, height * 0.65, "BINGHATTI DECORATOR TOWER"));
-        buildings.push(generateSkyscraper(totalWidth * 0.52, 145, height * 0.72, "BINGHATTI INTEGRAL PEAK"));
-        buildings.push(generateSkyscraper(totalWidth * 0.72, 115, height * 0.58, "BINGHATTI SCULPTURAL APEX"));
-        buildings.push(generateSkyscraper(totalWidth * 0.88, 95, height * 0.48, "BINGHATTI SYNERGY CROWN"));
+        buildings.push(generateSkyscraper(totalWidth * 0.12, 100, height * 0.45, "ARCHITECTURE SHADOW PLATINUM"));
+        buildings.push(generateSkyscraper(totalWidth * 0.32, 120, height * 0.65, "ARCHITECTURE DECORATOR TOWER"));
+        buildings.push(generateSkyscraper(totalWidth * 0.52, 145, height * 0.72, "ARCHITECTURE INTEGRAL PEAK"));
+        buildings.push(generateSkyscraper(totalWidth * 0.72, 115, height * 0.58, "ARCHITECTURE SCULPTURAL APEX"));
+        buildings.push(generateSkyscraper(totalWidth * 0.88, 95, height * 0.48, "ARCHITECTURE SYNERGY CROWN"));
       }
 
       // Place them at different seed frames so they don't draw in sync

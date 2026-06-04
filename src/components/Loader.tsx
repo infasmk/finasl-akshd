@@ -41,7 +41,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           className="flex items-center justify-center space-x-3"
         >
           <span className="font-serif text-3xl sm:text-5xl font-bold tracking-[0.4em] text-white">
-            BINGHATTI
+            ARCHITECTURE
           </span>
           <motion.span
             animate={{ scale: [1, 1.8, 1] }}
