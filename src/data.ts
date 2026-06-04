@@ -60,7 +60,46 @@ export const PROJECTS: Project[] = [
     startingPrice: "",
     paymentPlan: "",
   },
-
+ {
+    id: "aldar-eastern-mangrovbs",
+    title: "ALDAR EASTERN MANGROVBS ",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: aldarEasternMangrovbsImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  },
+  {
+    id: "seiko-dubai-mall",
+    title: "SEIKO DUBAI MALL",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: seikoDubaiMallImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  },
+    {
+    id: "edit-d-essence",
+    title: "EDIT'D ESSENCE",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: editDEssenceImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  },
+   {
+    id: "adidas-y3",
+    title: "ADIDAS Y3",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: adidasY3Img,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  }, 
 
 ];
 
