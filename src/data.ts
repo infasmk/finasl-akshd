@@ -1,13 +1,11 @@
-import bugattiImg from "./assets/projects/bugatti.svg";
-import jacobImg from "./assets/projects/jacob.svg";
-import mercedesImg from "./assets/projects/mercedes.svg";
-import onyxImg from "./assets/projects/onyx.svg";
-import crestImg from "./assets/projects/crest.svg";
-import amberImg from "./assets/projects/amber.svg";
-import phantomImg from "./assets/projects/phantom.svg";
-import genericLuxuryImg from "./assets/projects/generic_luxury.svg";
+import adidasImg from "./assets/projects/adidas.png";
+import buenoImg from "./assets/projects/bueno.png";
+import aldarEasternMangrovbsImg from "./assets/projects/pool.png";
+import seikoDubaiMallImg from "./assets/projects/seiko.png";
+import editDEssenceImg from "./assets/projects/spray.png";
+import adidasY3Img from "./assets/projects/y3.png";
 
-export interface Project {s
+export interface Project {
   id: string;
   title: string;
   subtitle: string;
@@ -43,115 +41,66 @@ export interface TimelineEvent {
 
 export const PROJECTS: Project[] = [
   {
-    id: "bugatti",
-    title: "Bugatti Residences",
-    subtitle: "By Binghatti",
-    location: "Business Bay, Dubai",
-    image: bugattiImg,
-    category: "Hyper-Tower",
-    startingPrice: "AED 19,099,000",
-    paymentPlan: "70/30",
+        id: "adidas",
+    title: "SINGAPORE AIRPORT",
+    subtitle: "TERMINAL 2",
+    location: "",
+    image: adidasImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
   },
   {
-    id: "jacob",
-    title: "Burj Binghatti Jacob & Co",
-    subtitle: "Crown Jewel Residences",
-    location: "Business Bay, Dubai",
-    image: jacobImg,
-    category: "Super-Tall Skyscraper",
-    startingPrice: "AED 22,000,000",
-    paymentPlan: "60/40",
+    id: "bueno",
+    title: "BUENO-DFC",
+    subtitle: "Design development, 3D modeling, and rendering",
+    location: "",
+    image: buenoImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  },
+ {
+    id: "aldar-eastern-mangrovbs",
+    title: "ALDAR EASTERN MANGROVBS ",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: aldarEasternMangrovbsImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
   },
   {
-    id: "mercedes",
-    title: "Mercedes-Benz Places",
-    subtitle: "Modernist Sensual Purity",
-    location: "Downtown Dubai",
-    image: mercedesImg,
-    category: "Global Branded Living",
-    startingPrice: "AED 15,500,000",
-    paymentPlan: "70/30",
+    id: "seiko-dubai-mall",
+    title: "SEIKO DUBAI MALL",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: seikoDubaiMallImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
   },
-  {
-    id: "onyx",
-    title: "Binghatti Onyx",
-    subtitle: "Sleek Obsidian Geometry",
-    location: "Jumeirah Village Circle",
-    image: onyxImg,
-    category: "Boutique Luxury",
-    startingPrice: "AED 3,200,000",
-    paymentPlan: "50/50",
+    {
+    id: "edit-d-essence",
+    title: "EDIT'D ESSENCE",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: editDEssenceImg,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
   },
-  {
-    id: "crest",
-    title: "Binghatti Crest",
-    subtitle: "Dynamic Golden Waves",
-    location: "Jumeirah Village Circle",
-    image: crestImg,
-    category: "High-Rise Residential",
-    startingPrice: "AED 2,800,000",
-    paymentPlan: "60/40",
-  },
-  {
-    id: "amber",
-    title: "Binghatti Amber",
-    subtitle: "Warm Radiant Facades",
-    location: "Jumeirah Village Circle",
-    image: amberImg,
-    category: "Exclusive Community",
-    startingPrice: "AED 2,500,000",
-    paymentPlan: "50/50",
-  },
-  {
-    id: "phantom",
-    title: "Binghatti Phantom",
-    subtitle: "Sovereign Sky Aesthetics",
-    location: "Dubai Water Canal",
-    image: phantomImg,
-    category: "Waterfront Luxury",
-    startingPrice: "AED 4,500,000",
-    paymentPlan: "70/30",
-  },
-  {
-    id: "venus",
-    title: "Binghatti Venus",
-    subtitle: "High-Rise Geometric Sophistication",
-    location: "Jumeirah Village Circle",
-    image: genericLuxuryImg,
-    category: "Boutique Luxury",
-    startingPrice: "AED 2,400,000",
-    paymentPlan: "60/40",
-  },
-  {
-    id: "canal",
-    title: "Binghatti Canal",
-    subtitle: "Fluid Maritime Wave Art",
-    location: "Business Bay, Dubai",
-    image: genericLuxuryImg,
-    category: "Waterfront Luxury",
-    startingPrice: "AED 2,900,000",
-    paymentPlan: "60/40",
-  },
-  {
-    id: "luna",
-    title: "Binghatti Luna",
-    subtitle: "Elite Contemporary Residences",
-    location: "Jumeirah Village Circle",
-    image: genericLuxuryImg,
-    category: "Premium Living",
-    startingPrice: "AED 2,200,000",
-    paymentPlan: "50/50",
-  },
-  {
-    id: "galaxy",
-    title: "Binghatti Galaxy",
-    subtitle: "Interstellar Organic Form",
-    location: "Jumeirah, Dubai",
-    image: genericLuxuryImg,
-    category: "Global Branded Living",
-    startingPrice: "AED 8,900,000",
-    paymentPlan: "70/30",
-  },
+   {
+    id: "adidas-y3",
+    title: "ADIDAS Y3",
+    subtitle: "Concept and design developement , 3D model And rendering",
+    location: "",
+    image: adidasY3Img,
+    category: "",
+    startingPrice: "",
+    paymentPlan: "",
+  }, 
+
 ];
 
 export const MILESTONES: Milestone[] = [
