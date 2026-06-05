@@ -8,7 +8,6 @@ import Milestones from "./components/Milestones";
 import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import AllProjects from "./components/AllProjects";
 import CV from "./components/CV";
 import GoldParticleBackground from "./components/GoldParticleBackground";
