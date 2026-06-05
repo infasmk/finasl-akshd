@@ -211,7 +211,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
       period: "2026 - Present",
       title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
       location: "",
-      stats: "120+ Retail Spaces | Core Leader",
+      stats: "",
     },
     {
       period: "2025",
