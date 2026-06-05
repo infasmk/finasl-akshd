@@ -127,11 +127,9 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4">
-              <span className="font-mono text-[10px] tracking-[0.4em] text-gold uppercase font-bold block">
-                ARCHITECTURE ARCHITECTURAL ARCHIVE
-              </span>
+             
               <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight text-white uppercase leading-none">
-                COMPLETE <span className="font-sans font-semibold text-gold italic">PORTFOLIO</span>
+                ALL PROJECTS
               </h1>
             </div>
             <p className="text-gray-400 font-sans font-light text-sm max-w-md leading-relaxed">
@@ -142,8 +140,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
 
         {/* Symmetrical Results Count */}
         <div className="flex justify-between items-center text-xs font-mono tracking-widest text-white/40 uppercase mb-8 border-b border-white/5 pb-4">
-          <span>SHOWING {filteredProjects.length} ARCHITECTURAL MASTERWORKS</span>
-          <span>DUBAI WORLD-CLASS STANDARDS</span>
+         
         </div>
 
         {/* Projects Grid */}
