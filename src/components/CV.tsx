@@ -207,7 +207,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   ];
 
   const CAREER_TIMELINE = [
-    {
+     {
       period: "2026 - Present",
       title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
       location: "",
@@ -385,7 +385,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
         </section>
 
-   {/* CLIENTS & BRANDS SECTION */}
+        {/* CLIENTS & BRANDS SECTION */}
         <section id="cv-brands" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
@@ -569,7 +569,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </section>
 
         {/* EDUCATION & LANGUAGES SECTIONS IN SPLIT */}
- <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
+        <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 font-normal">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               06 / EDUCATION & LINGUISTIC SKILLS
@@ -643,7 +643,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Intro Text Column */}
-          <div className="lg:col-span-5 space-y-5">
+           <div className="lg:col-span-5 space-y-5">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#C5A059] uppercase block font-bold">
               07 / SECURE THE COLLABORATION
             </span>
@@ -760,7 +760,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </div>
 
       </div>
-    </section>
+      </section>
 
     </div>
   );
