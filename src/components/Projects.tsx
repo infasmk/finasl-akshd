@@ -102,15 +102,22 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
 
                 {/* Text Card details */}
                 <div className="p-6 md:p-8">
-                  <div className="space-y-1">
-                    <h3 className={`font-serif text-xl font-normal transition-colors duration-300 ${
-                      isActive ? "text-gold" : "text-white group-hover:text-gold"
-                    }`}>
-                      {project.title}
-                    </h3>
-                    <p className="font-mono text-[10px] tracking-[0.25em] text-[#B28B45] uppercase font-semibold">
-                      {project.subtitle}
-                    </p>
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      <h3 className={`font-serif text-xl font-normal transition-colors duration-300 ${
+                        isActive ? "text-gold" : "text-white group-hover:text-gold"
+                      }`}>
+                        {project.title}
+                      </h3>
+                      <p className="font-mono text-[10px] tracking-[0.25em] text-[#B28B45] uppercase font-semibold">
+                        {project.subtitle}
+                      </p>
+                    </div>
+                    {project.description && (
+                      <p className="font-sans text-xs text-gray-400 font-light leading-relaxed">
+                        {project.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               </motion.div>

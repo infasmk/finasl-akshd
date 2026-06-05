@@ -166,7 +166,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
             {/* Main Projects Section */}
             {filteredProjects.filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id)).length > 0 && (
               <div className="space-y-6">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   <AnimatePresence mode="popLayout">
                     {filteredProjects
                       .filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
@@ -195,10 +195,10 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                             className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
                               isActive
                                 ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
-                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30"
+                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30 shadow-sm"
                             }`}
                           >
-                            <div className="relative w-full h-[150px] sm:h-[180px] md:h-[220px] overflow-hidden">
+                            <div className="relative w-full h-[140px] min-[480px]:h-[170px] md:h-[200px] overflow-hidden">
                               <img
                                 src={project.image}
                                 alt={`${project.title}`}
@@ -217,15 +217,22 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                             </div>
 
                             {/* Content details */}
-                            <div className="p-3.5 sm:p-5 space-y-1 flex-grow flex flex-col justify-center">
-                              <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
-                                isActive ? "text-gold" : "text-white group-hover:text-gold"
-                              }`}>
-                                {project.title}
-                              </h3>
-                              <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
-                                {project.subtitle}
-                              </p>
+                            <div className="p-3.5 sm:p-5 space-y-3 flex-grow flex flex-col justify-center">
+                              <div className="space-y-1">
+                                <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
+                                  isActive ? "text-gold" : "text-white group-hover:text-gold"
+                                }`}>
+                                  {project.title}
+                                </h3>
+                                <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
+                                  {project.subtitle}
+                                </p>
+                              </div>
+                              {project.description && (
+                                <p className="font-sans text-[10px] text-gray-400 font-light leading-relaxed line-clamp-3">
+                                  {project.description}
+                                </p>
+                              )}
                             </div>
                           </motion.div>
                         );
@@ -248,7 +255,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                   <div className="w-16 h-0.5 bg-gold mt-2" />
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   <AnimatePresence mode="popLayout">
                     {filteredProjects
                       .filter(p => !["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
@@ -277,10 +284,10 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                             className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
                               isActive
                                 ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
-                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30"
+                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30 shadow-sm"
                             }`}
                           >
-                            <div className="relative w-full h-[150px] sm:h-[180px] md:h-[220px] overflow-hidden">
+                            <div className="relative w-full h-[140px] min-[480px]:h-[170px] md:h-[200px] overflow-hidden">
                               <img
                                 src={project.image}
                                 alt={`${project.title}`}
@@ -299,15 +306,22 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                             </div>
 
                             {/* Content details */}
-                            <div className="p-3.5 sm:p-5 space-y-1 flex-grow flex flex-col justify-center">
-                              <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
-                                isActive ? "text-gold" : "text-white group-hover:text-gold"
-                              }`}>
-                                {project.title}
-                              </h3>
-                              <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
-                                {project.subtitle}
-                              </p>
+                            <div className="p-3.5 sm:p-5 space-y-3 flex-grow flex flex-col justify-center">
+                              <div className="space-y-1">
+                                <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
+                                  isActive ? "text-gold" : "text-white group-hover:text-gold"
+                                }`}>
+                                  {project.title}
+                                </h3>
+                                <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
+                                  {project.subtitle}
+                                </p>
+                              </div>
+                              {project.description && (
+                                <p className="font-sans text-[10px] text-gray-400 font-light leading-relaxed line-clamp-3">
+                                  {project.description}
+                                </p>
+                              )}
                             </div>
                           </motion.div>
                         );

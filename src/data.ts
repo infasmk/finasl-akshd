@@ -14,6 +14,7 @@ export interface Project {
   category: string;
   startingPrice: string;
   paymentPlan: string;
+   description: string;
 }
 
 export interface Milestone {
@@ -49,6 +50,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
+    description: " sss",
   },
   {
     id: "bueno",
@@ -59,6 +61,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
+
   },
  {
     id: "aldar-eastern-mangrovbs",
@@ -107,25 +110,26 @@ export const MILESTONES: Milestone[] = [
   {
     id: "m1",
     tag: "completed",
-    number: 80,
+    number: 250,
     suffix: "+",
     label: "PROJECTS COMPLETED",
   },
   {
     id: "m2",
     tag: "units",
-    number: 12000,
+    number: 25,
     suffix: "+",
-    label: "UNITS HANDED OVER",
+    label: "COUNTRY",
   },
   {
     id: "m3",
     tag: "value",
-    number: 70,
-    suffix: " BILLION",
-    label: "PROJECT VALUE (AED)",
+    number: 10,
+    suffix: "+",
+    label: "GLOBAL BRANDS",
   },
 ];
+
 
 export const MAP_PINS: LocationPin[] = [
   {
