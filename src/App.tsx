@@ -61,7 +61,7 @@ export default function App() {
                 transition={{ duration: 0.8 }}
                 className="font-serif tracking-[0.3em] text-3xl font-bold text-gold block text-glow"
               >
-                AS
+                AK
               </motion.span>
               <motion.div
                 initial={{ width: 0 }}

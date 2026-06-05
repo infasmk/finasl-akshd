@@ -17,14 +17,10 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-8 text-center flex flex-col items-center"
         >
-          {/* Small Label */}
-          <span className="font-mono text-[10px] tracking-[0.3em] text-gold uppercase font-bold block">
-            PIONEERING ARCHITECTURE
-          </span>
 
           {/* Main Title */}
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight">
-            WHY <span className="font-semibold text-gold font-sans italic tracking-wide">ARCHITECTURE?</span>
+            About<span className="font-semibold text-gold font-sans italic tracking-wide">?</span>
           </h2>
 
           {/* Divider line */}

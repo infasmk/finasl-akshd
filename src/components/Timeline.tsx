@@ -6,7 +6,7 @@ export default function Timeline() {
       period: "2026 - Present",
       title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
       location: "",
-      stats: "120+ Retail Spaces | Core Leader",
+      stats: "",
     },
     {
       period: "2025",
@@ -37,9 +37,7 @@ export default function Timeline() {
           
           {/* LEFT AREA: Heading (matching CV presentation) */}
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              05 / CHRONOLOGICAL EXPANSION
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
         TIMELINE
             </h2>

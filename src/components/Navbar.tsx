@@ -72,13 +72,13 @@ export default function Navbar({
               className="font-serif tracking-[0.3em] text-xl font-bold transition-colors duration-300"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
             >
-              AS
+              AK
             </span>
             <span
               className="text-[8px] font-mono tracking-widest uppercase hidden sm:inline-block transition-colors duration-300 animate-pulse ml-2"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#6b7280" : "rgba(255,255,255,0.6)" }}
             >
-            ARCHITUCTUR 
+            
             </span>
           </button>
 
@@ -87,7 +87,7 @@ export default function Navbar({
             {[
               { label: "HOME", id: "hero" },
               { label: "ABOUT", id: "about" },
-              { label: "PROJECTS", id: "projectss" },
+              { label: "PROJECTS", id: "projects" },
               { label: "CV", id: "cv" },
               { label: "CONTACT", id: "contact" },
             ].map((link) => (

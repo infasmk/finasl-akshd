@@ -15,15 +15,11 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Intro Text Column */}
           <div className="lg:col-span-5 space-y-5">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#C5A059] uppercase block font-bold">
-              07 / SECURE THE COLLABORATION
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-5xl text-luxury-text font-extralight tracking-tight uppercase leading-tight">
               THANK YOU , LOOKING FORWARD TO WORK WITH YOU
             </h2>
-            <p className="font-sans text-xs text-neutral-400 font-light leading-relaxed max-w-sm">
-              Get in touch for flagship retail design collaborations, boutique commercial interiors, or advanced parametric spatial workflows.
-            </p>
+           
           </div>
 
           {/* Right Direct Studio Contact card: Compact, Tactile, and Radiant (Bright Luxury Card) */}
@@ -35,10 +31,7 @@ export default function Contact() {
               <div className="absolute -left-20 -top-20 w-40 h-40 bg-black/[0.01] rounded-full blur-3xl pointer-events-none group-hover:translate-x-12 group-hover:translate-y-12 transition-all duration-700" />
 
               {/* Classic Golden Double Accent Corners (Physical Card Detail) */}
-              <div className="absolute top-3 right-3 flex space-x-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]/40 group-hover:bg-[#C5A059] transition-all" />
-                <span className="font-mono text-[7px] text-neutral-400 tracking-widest font-bold group-hover:text-neutral-500 transition-colors">STUDIO ID</span>
-              </div>
+              
 
               {/* Inner Exquisite Card Frame */}
               <div className="border border-neutral-100 rounded-lg p-5 bg-white relative z-10 space-y-6">
@@ -46,17 +39,13 @@ export default function Contact() {
                 {/* Header: Brand Identity */}
                 <div className="flex justify-between items-start">
                   <div className="space-y-1">
-                    <span className="font-mono text-[8px] tracking-[0.25em] text-[#C5A059] font-bold block uppercase bg-[#C5A059]/10 px-2 py-0.5 rounded w-fit">
-                      DIRECT INQUIRY
-                    </span>
+                    
                     <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
                     AKASH SUNDHAKAR
                     </h3>
                   </div>
                   {/* Fine logo graphic */}
-                  <div className="border border-[#C5A059]/20 p-1 bg-neutral-50 group-hover:border-[#C5A059]/50 transition-colors">
-                    <span className="font-serif text-xs text-[#C5A059] font-bold tracking-widest">AS</span>
-                  </div>
+                  
                 </div>
 
                 {/* Core Metadata List (Compact & Clean) */}
@@ -87,9 +76,7 @@ export default function Contact() {
 
                 {/* Brand-Colored Connected Portals at Base */}
                 <div className="pt-4 border-t border-neutral-100 space-y-3">
-                  <span className="font-mono text-[8px] tracking-widest text-[#B28B45] uppercase font-bold block">
-                    CONNECTED PORTALS
-                  </span>
+                 
                   
                   <div className="flex gap-4 justify-start">
                     {/* WhatsApp Action */}

@@ -69,7 +69,7 @@ export default function Milestones() {
             transition={{ duration: 0.6 }}
             className="font-mono text-[10px] tracking-[0.35em] text-gold uppercase"
           >
-            SOCIETAL METRICS & SOLID PROOFS
+            
           </motion.p>
           
           <motion.h2
