@@ -203,7 +203,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { value: "3+", label: "Years Experience" },
     { value: "200+", label: "Projects Completed" },
     { value: "200,000+", label: "Sq.ft Designed" },
-    { value: "MENA & EEA", label: "Regional Experience" }
+    
   ];
 
   const CAREER_TIMELINE = [
@@ -288,29 +288,23 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <section id="cv-hero" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12">
           <div className="lg:col-span-12 space-y-6 max-w-4xl">
             <div className="space-y-2">
-              <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase font-bold block">
-                CREATIVE ARCHITECTURE & DESIGN LEADER
-              </span>
+            
               <h1 className="font-serif text-5xl md:text-7xl font-extralight text-neutral-900 leading-tight tracking-tight">
-                AJAY
+                AKASH  SUDHAKAR
               </h1>
               <h2 className="font-mono text-xs md:text-sm tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
-                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist <span className="text-[#C5A059] mx-2">|</span> Creative Design Professional
+                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
               </h2>
             </div>
 
-            <p className="font-sans text-sm md:text-base text-neutral-600 font-light leading-relaxed max-w-xl">
-              Architect with 3+ years of experience shaping functional and impactful spaces across retail, workplaces, hospitality, residential, and F&B sectors. Passionate about creating concept-driven environments that strengthen brand identity and elevate human experiences.
-            </p>
+            
           </div>
         </section>
 
         {/* PROFILE SECTION */}
         <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              01 / CONCEPT BRIEF
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
               PROFILE
             </h2>
@@ -346,9 +340,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* EXPERIENCE SECTION */}
         <section id="cv-experience" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              02 / CAREER STRUCTURE
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
               PROFESSIONAL EXPERIENCE
             </h2>
@@ -388,9 +380,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* CLIENTS & BRANDS SECTION */}
         <section id="cv-brands" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              03 / BRAND COLLABORATIONS
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
               CLIENTS & BRANDS
             </h2>
@@ -435,22 +425,13 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <section id="cv-responsibilities" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 space-y-8">
             <div>
-              <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-                03.5 / CORE CONTRIBUTIONS
-              </span>
+            
               <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
                 RESPONSIBILITIES
               </h2>
             </div>
             
-            <div className="pt-8 border-t border-neutral-200/50">
-              <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-                ACADEMIC & PROFESSIONAL FOUNDATION
-              </span>
-              <h3 className="font-serif text-xl text-neutral-900 font-extralight tracking-tight uppercase">
-                INTERN - PROFESSIONAL TRAINEE
-              </h3>
-            </div>
+          
           </div>
 
           <div className="lg:col-span-8 space-y-12">
@@ -513,9 +494,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* SKILLS SECTION */}
         <section id="cv-skills" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              04 / PRODUCTION ENGINE
-            </span>
+          
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
               DESIGN SOFTWARE
             </h2>
@@ -542,9 +521,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* AI TOOLS SECTION */}
         <section id="cv-ai-tools" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              05 / NEXT-GEN IMAGINATION
-            </span>
+           
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
               AI VISUALIZATION & CREATIVE TOOLS
             </h2>
@@ -571,9 +548,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* EDUCATION & LANGUAGES SECTIONS IN SPLIT */}
         <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 font-normal">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
-              06 / EDUCATION & LINGUISTIC SKILLS
-            </span>
+          
             <h2 className="font-serif text-2xl text-neutral-900 font-extralight tracking-tight uppercase">
               CREDENTIALS & LANGUAGES
             </h2>
@@ -591,7 +566,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               <div className="flex-1 bg-white border border-neutral-200/80 hover:border-[#C5A059]/30 hover:shadow-lg hover:shadow-neutral-200/50 p-6 flex flex-col justify-center space-y-4 relative overflow-hidden transition-all duration-300">
                 <div className="absolute top-0 right-0 w-2 h-2 bg-[#C5A059]" />
                 
-                <span className="font-mono text-[10px] tracking-widest text-[#B28B45] font-bold">2017 - 2022</span>
+                <span className="font-mono text-[10px] tracking-widest text-[#B28B45] font-bold">2018 - 2023</span>
                 <div className="space-y-1.5">
                   <h3 className="font-serif text-lg font-light text-neutral-900 leading-snug">
                     B.Arch. – Architecture
@@ -644,15 +619,11 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Intro Text Column */}
            <div className="lg:col-span-5 space-y-5">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#C5A059] uppercase block font-bold">
-              07 / SECURE THE COLLABORATION
-            </span>
+            
             <h2 className="font-serif text-3xl md:text-5xl text-luxury-text font-extralight tracking-tight uppercase leading-tight">
               THANK YOU , LOOKING FORWARD TO WORK WITH YOU
             </h2>
-            <p className="font-sans text-xs text-neutral-400 font-light leading-relaxed max-w-sm">
-              Get in touch for flagship retail design collaborations, boutique commercial interiors, or advanced parametric spatial workflows.
-            </p>
+         
           </div>
 
           {/* Right Direct Studio Contact card: Compact, Tactile, and Radiant (Bright Luxury Card) */}
@@ -664,10 +635,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               <div className="absolute -left-20 -top-20 w-40 h-40 bg-black/[0.01] rounded-full blur-3xl pointer-events-none group-hover:translate-x-12 group-hover:translate-y-12 transition-all duration-700" />
 
               {/* Classic Golden Double Accent Corners (Physical Card Detail) */}
-              <div className="absolute top-3 right-3 flex space-x-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]/40 group-hover:bg-[#C5A059] transition-all" />
-                <span className="font-mono text-[7px] text-neutral-400 tracking-widest font-bold group-hover:text-neutral-500 transition-colors">STUDIO ID</span>
-              </div>
+              
 
               {/* Inner Exquisite Card Frame */}
               <div className="border border-neutral-100 rounded-lg p-5 bg-white relative z-10 space-y-6">
@@ -675,17 +643,13 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                 {/* Header: Brand Identity */}
                 <div className="flex justify-between items-start">
                   <div className="space-y-1">
-                    <span className="font-mono text-[8px] tracking-[0.25em] text-[#C5A059] font-bold block uppercase bg-[#C5A059]/10 px-2 py-0.5 rounded w-fit">
-                      DIRECT INQUIRY
-                    </span>
+                  
                     <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
                     AKASH SUNDHAKAR
                     </h3>
                   </div>
                   {/* Fine logo graphic */}
-                  <div className="border border-[#C5A059]/20 p-1 bg-neutral-50 group-hover:border-[#C5A059]/50 transition-colors">
-                    <span className="font-serif text-xs text-[#C5A059] font-bold tracking-widest">AS</span>
-                  </div>
+                 
                 </div>
 
                 {/* Core Metadata List (Compact & Clean) */}
@@ -716,9 +680,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
                 {/* Brand-Colored Connected Portals at Base */}
                 <div className="pt-4 border-t border-neutral-100 space-y-3">
-                  <span className="font-mono text-[8px] tracking-widest text-[#B28B45] uppercase font-bold block">
-                    CONNECTED PORTALS
-                  </span>
+                 
                   
                   <div className="flex gap-4 justify-start">
                     {/* WhatsApp Action */}
