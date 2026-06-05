@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { Sparkles, Trophy, Compass } from "lucide-react";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -12,13 +11,6 @@ export default function Hero() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section
@@ -51,16 +43,7 @@ export default function Hero() {
       {/* Main Content (Left Aligned) */}
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 w-full h-full flex flex-col justify-center z-20 pt-16">
         <div className="max-w-2xl md:max-w-3xl space-y-8">
-          {/* Tag */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 border border-gold/30 bg-gold/5 px-4 py-1.5 font-mono text-[9px] tracking-[0.3em] text-gold uppercase"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span>BRANDED RESIDENCES</span>
-          </motion.div>
+
 
           {/* Combined Heading + Subheading with Cinematic Stagger */}
           <div className="space-y-4">
@@ -68,7 +51,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="font-serif text-6xl md:text-8xl lg:text-9xl font-light tracking-[0.05em] leading-none text-white uppercase"
+              className="font-sans text-3xl xs:text-4xl min-[400px]:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white uppercase"
               style={{ color: "#ffffff" }}
             >
               ARCHITECTURE
@@ -78,10 +61,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.6 }}
-              className="text-sm md:text-base font-sans font-light text-gray-300 max-w-md leading-relaxed tracking-wider uppercase"
+              className="text-xs md:text-sm font-sans font-light text-gray-300 max-w-md leading-relaxed tracking-wider uppercase"
               style={{ color: "#d1d5db" }}
             >
-              Architectural masterworks and curated luxury living in the heart of Dubai.
+               THAT MOVES PEOPLE.
             </motion.p>
           </div>
 
