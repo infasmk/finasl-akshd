@@ -186,34 +186,17 @@ const renderBrandLogo = (name: string) => {
 };
 
 export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [downloading, setDownloading] = useState(false);
-
-  // Form states
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleInquiry = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
-    }, 4000);
-  };
-
-  const handleDownloadCV = () => {
-    setDownloading(true);
-    setTimeout(() => {
-      window.print();
-      setDownloading(false);
-    }, 1000);
-  };
+  useEffect(() => {
+    // Force body / html background color so that any overscrolling is seamlessly beige
+    const originalBg = document.body.style.backgroundColor;
+    const originalHtmlBg = document.documentElement.style.backgroundColor;
+    document.body.style.backgroundColor = "#FAF9F5";
+    document.documentElement.style.backgroundColor = "#FAF9F5";
+    return () => {
+      document.body.style.backgroundColor = originalBg;
+      document.documentElement.style.backgroundColor = originalHtmlBg;
+    };
+  }, []);
 
   // Static Data
   const STATS = [
@@ -225,37 +208,22 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
   const CAREER_TIMELINE = [
     {
-      period: "2024 - PRESENT",
-      title: "Senior Retail Architect & Design Lead",
-      location: "APAC, MENA & EEA Development Regions",
+      period: "2026 - Present",
+      title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
+      location: "",
       stats: "120+ Retail Spaces | Core Leader",
-      bullets: [
-        "Delivered and executed concept-driven retail layouts for prominent global brands (Adidas, Sephora, ON, Seiko, Mumuso, etc.), managing over 120,000 sq.ft of luxury commercial space.",
-        "Engineered real-time rendering pipelines and spatial simulations (utilizing advanced AI, D5 Render, and VR tours), reducing client approval lead times by 35% and enhancing engagement.",
-        "Orchestrated cross-functional collaboration and work allocation, delegating and guiding professional architectural production teams in India and the Philippines to ensure consistent execution standards."
-      ]
+    },
+    {
+      period: "2025",
+      title: "RETAIL CONCEPTUAL DESIGNER",
+      location: "",
+      stats: "",
     },
     {
       period: "2023 - 2024",
-      title: "Concept Architect & Spatial Designer",
-      location: "Abu Dhabi & Dubai, UAE",
-      stats: "Community Regeneration | Commercial Masterworks",
-      bullets: [
-        "Designed comprehensive zoning schemes, landscape layouts, and high-fidelity 3D concepts for Aldar community renewal and urban regeneration programs in Abu Dhabi.",
-        "Formulated award-winning designs for premium office environments, boutique hospitality concepts (Radisson), and artisanal F&B projects (Bueno Cafe).",
-        "Conducted extensive material research, zoning compliance, and building-permit drawings, translating ambitious branding guidelines into tangible structural masterpieces."
-      ]
-    },
-    {
-      period: "2022 - 2023",
-      title: "Architectural Designer & Technical Lead",
-      location: "Dubai, UAE",
-      stats: "200,000+ Sq.ft | AutoCAD & Fine Spatial Detailing",
-      bullets: [
-        "Developed exhaustive technical drawing sets, construction detailing, and structural test-fits in AutoCAD for high-traffic retail formats under Al Futtaim Group and Wasl Properties.",
-        "Coordinated interior and landscape alignment, resolving design clashes between electrical, mechanical, and structural layouts on-site.",
-        "Maintained robust brand compliance manuals and design templates, facilitating seamless design transfer and high efficiency in project delivery cycles."
-      ]
+      title: "JUNIOR ARCHITECT",
+      location: "",
+      stats: " ",
     }
   ];
 
@@ -296,7 +264,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   return (
     <div className="pt-24 pb-0 min-h-screen text-neutral-800 relative z-10 w-full bg-[#FAF9F5]">
       {/* Visual Background Blueprint System & Fine Grid Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.06] select-none z-0">
+      <div className="absolute inset-0 pointer-events-none opacity-[0.06] select-none z-0 overflow-hidden">
         <div className="w-full h-full bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[size:24px_24px]" />
         <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
         <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
@@ -306,7 +274,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Navigation & Header Actions */}
-        <div className="pb-6 border-b border-neutral-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-20">
+        <div className="pb-6 border-b border-neutral-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
           <button
             onClick={onBackToHome}
             className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-[#B28B45] uppercase hover:text-neutral-900 transition-colors duration-300 cursor-pointer focus:outline-none"
@@ -317,8 +285,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </div>
 
         {/* HERO SECTION */}
-        <section id="cv-hero" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
-          {/* Left Text Intro (Full Width) */}
+        <section id="cv-hero" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12">
           <div className="lg:col-span-12 space-y-6 max-w-4xl">
             <div className="space-y-2">
               <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase font-bold block">
@@ -339,7 +306,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </section>
 
         {/* PROFILE SECTION */}
-        <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+        <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               01 / CONCEPT BRIEF
@@ -354,7 +321,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               Architect with 3 years of experience in shaping functional and impactful spaces across interiors, retail, workplaces, residential, and F&B sectors. Passionate about delivering concept-driven, user-centered designs that authentically reflect brand identity while enriching the human experience. Known for a collaborative approach, meticulous attention to detail, and a strong commitment to design excellence through thoughtful detailing and purpose-led work.
             </p>
 
-            {/* Dynamic stats layout */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
               {STATS.map((stat, idx) => (
                 <motion.div
@@ -378,7 +344,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </section>
 
         {/* EXPERIENCE SECTION */}
-        <section id="cv-experience" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+        <section id="cv-experience" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               02 / CAREER STRUCTURE
@@ -389,11 +355,9 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8 space-y-10">
-            {/* Timeline container */}
             <div className="relative border-l border-[#C5A059]/30 pl-6 ml-4 space-y-16">
               {CAREER_TIMELINE.map((item, idx) => (
                 <div key={idx} className="relative group">
-                  {/* Timeline diamond point */}
                   <div className="absolute -left-[31px] top-1.5 w-4 h-4 bg-[#FAF9F5] border-2 border-[#C5A059] rounded-none rotate-45 group-hover:bg-[#C5A059] group-hover:rotate-[135deg] transition-all duration-500 ease-out" />
                   
                   <div className="space-y-4">
@@ -414,7 +378,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                         {item.location}
                       </p>
                     </div>
-
                   </div>
                 </div>
               ))}
@@ -468,9 +431,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
         </section>
 
-
-        {/* RESPONSIBILITIES & TRAINEE EXPERIENCE SECTION */}
-        <section id="cv-responsibilities" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+        {/* RESPONSIBILITIES SECTION */}
+        <section id="cv-responsibilities" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 space-y-8">
             <div>
               <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
@@ -492,7 +454,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8 space-y-12">
-            {/* Responsibilities Block */}
             <div className="bg-white border border-neutral-200/80 hover:border-[#C5A059]/30 hover:shadow-lg hover:shadow-neutral-100 p-8 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-6 h-[1px] bg-[#C5A059]/20" />
               <div className="absolute top-0 right-0 w-[1px] h-6 bg-[#C5A059]/20" />
@@ -524,7 +485,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               </ul>
             </div>
 
-            {/* Trainee Block */}
             <div className="bg-white border border-neutral-200/80 hover:border-[#C5A059]/30 hover:shadow-lg hover:shadow-neutral-100 p-8 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-6 h-[1px] bg-[#C5A059]/20" />
               <div className="absolute top-0 right-0 w-[1px] h-6 bg-[#C5A059]/20" />
@@ -580,7 +540,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </section>
 
         {/* AI TOOLS SECTION */}
-        <section id="cv-ai-tools" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+        <section id="cv-ai-tools" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               05 / NEXT-GEN IMAGINATION
@@ -607,6 +567,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
             </div>
           </div>
         </section>
+
+        {/* EDUCATION & LANGUAGES SECTIONS IN SPLIT */}
  <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 font-normal">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
@@ -667,7 +629,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
         </section>
 
-      </div> {/* Close max-w-7xl early for full-bleed contact section */}
+      </div>
 
       {/* CONTACT SECTION — Fluid Full Width with no gap to footer */}
        <section
