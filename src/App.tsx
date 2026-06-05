@@ -40,7 +40,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-luxury-black font-sans text-white relative selection:bg-gold selection:text-black overflow-x-hidden w-full">
+    <div className={`min-h-screen ${viewState === "cv" ? "bg-[#FAF9F5] text-neutral-800" : "bg-luxury-black text-white"} font-sans relative selection:bg-gold selection:text-black overflow-x-hidden w-full transition-colors duration-500`}>
       {/* Cinematic Luxury Preloading Screen */}
       <AnimatePresence mode="wait">
         {isLoading && (
