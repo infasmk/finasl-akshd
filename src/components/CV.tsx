@@ -551,7 +551,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </section>
 
         {/* SKILLS SECTION */}
-        <section id="cv-skills" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+        <section id="cv-skills" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               04 / PRODUCTION ENGINE
@@ -572,7 +572,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                   >
                     <span className="text-[#C5A059]/80 text-[10px]">✦</span>
                     <span className="font-semibold">{skill.name}</span>
-                    <span className="text-[9px] text-[#B28B45] font-light">({skill.proficiency}%)</span>
                   </div>
                 ))}
               </div>
@@ -608,9 +607,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
             </div>
           </div>
         </section>
-
-        {/* EDUCATION & LANGUAGES SECTIONS IN SPLIT */}
-        <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
+ <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 font-normal">
             <span className="font-mono text-[10px] tracking-[0.4em] text-[#B28B45] uppercase block font-bold mb-2">
               06 / EDUCATION & LINGUISTIC SKILLS
@@ -620,10 +617,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
             </h2>
           </div>
 
-          {/* Split right col (8 cols total, 4 for Edu, 4 for language) */}
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            
-            {/* Education (Premium Architectural Card) */}
             <div className="space-y-6 flex flex-col h-full">
               <div className="flex items-center space-x-2.5 pb-2 border-b border-neutral-200">
                 <GraduationCap className="w-4 h-4 text-[#B28B45]" />
@@ -650,7 +644,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               </div>
             </div>
 
-            {/* Languages (With responsive circular progress indicators) */}
             <div className="space-y-6 flex flex-col h-full">
               <div className="flex items-center space-x-2.5 pb-2 border-b border-neutral-200">
                 <Globe className="w-4 h-4 text-[#B28B45]" />
@@ -660,60 +653,17 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               </div>
 
               <div className="flex-1 grid grid-cols-2 gap-4">
-                {/* Tamil Circle */}
-                <div className="bg-white border border-neutral-200/80 p-6 flex flex-col items-center justify-center space-y-3 shadow-sm hover:shadow-md hover:border-[#C5A059]/30 transition-all duration-300 h-full">
-                  <div className="relative w-16 h-16 flex items-center justify-center">
-                    <svg className="absolute inset-0 w-full h-full rotate-270" viewBox="0 0 36 36">
-                      <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" strokeWidth="1" className="text-neutral-100" />
-                      <motion.circle
-                        cx="18"
-                        cy="18"
-                        r="16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        className="text-[#C5A059]"
-                        strokeDasharray="100, 100"
-                        initial={{ strokeDashoffset: 100 }}
-                        whileInView={{ strokeDashoffset: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                      />
-                    </svg>
-                    <span className="font-mono text-xs text-neutral-900 font-bold">100%</span>
-                  </div>
-                  <span className="font-serif text-xs uppercase tracking-widest text-neutral-900 font-medium">TAMIL</span>
-                  <span className="font-mono text-[8px] text-neutral-500 uppercase">Native Proficiency</span>
+                <div className="bg-white border border-neutral-200/80 p-6 flex flex-col items-center justify-center space-y-2.5 shadow-sm hover:shadow-md hover:border-[#C5A059]/30 transition-all duration-300 h-full">
+                  <span className="font-serif text-sm uppercase tracking-widest text-neutral-900 font-semibold">TAMIL</span>
+                  <span className="font-mono text-[9px] text-[#B28B45] uppercase tracking-wider font-bold bg-[#B28B45]/5 px-2.5 py-1 rounded">Native Speaker</span>
                 </div>
 
-                {/* English Circle */}
-                <div className="bg-white border border-neutral-200/80 p-6 flex flex-col items-center justify-center space-y-3 shadow-sm hover:shadow-md hover:border-[#C5A059]/30 transition-all duration-300 h-full">
-                  <div className="relative w-16 h-16 flex items-center justify-center">
-                    <svg className="absolute inset-0 w-full h-full rotate-270" viewBox="0 0 36 36">
-                      <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" strokeWidth="1" className="text-neutral-100" />
-                      <motion.circle
-                        cx="18"
-                        cy="18"
-                        r="16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        className="text-[#C5A059]"
-                        strokeDasharray="100, 100"
-                        initial={{ strokeDashoffset: 100 }}
-                        whileInView={{ strokeDashoffset: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                      />
-                    </svg>
-                    <span className="font-mono text-xs text-neutral-900 font-bold">100%</span>
-                  </div>
-                  <span className="font-serif text-xs uppercase tracking-widest text-[#050505] font-medium">ENGLISH</span>
-                  <span className="font-mono text-[8px] text-neutral-500 uppercase">Professional Status</span>
+                <div className="bg-white border border-neutral-200/80 p-6 flex flex-col items-center justify-center space-y-2.5 shadow-sm hover:shadow-md hover:border-[#C5A059]/30 transition-all duration-300 h-full">
+                  <span className="font-serif text-sm uppercase tracking-widest text-[#050505] font-semibold">ENGLISH</span>
+                  <span className="font-mono text-[9px] text-[#B28B45] uppercase tracking-wider font-bold bg-[#B28B45]/5 px-2.5 py-1 rounded">Professional Status</span>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 

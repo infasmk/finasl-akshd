@@ -51,7 +51,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="font-sans text-3xl xs:text-4xl min-[400px]:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none text-white uppercase"
+              className="font-sans text-2xl min-[360px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold tracking-tight leading-none text-white uppercase"
               style={{ color: "#ffffff" }}
             >
               ARCHITECTURE
