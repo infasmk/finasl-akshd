@@ -15,15 +15,11 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Intro Text Column */}
           <div className="lg:col-span-5 space-y-5">
-            <span className="font-mono text-[10px] tracking-[0.4em] text-[#C5A059] uppercase block font-bold">
-              07 / SECURE THE COLLABORATION
-            </span>
+         
             <h2 className="font-serif text-[18px] sm:text-xl md:text-[23px] lg:text-2xl text-luxury-text font-light tracking-wider uppercase leading-snug">
               THANK YOU , LOOKING FORWARD TO WORK WITH YOU
             </h2>
-            <p className="font-sans text-xs text-neutral-400 font-light leading-relaxed max-w-sm">
-              Get in touch for flagship retail design collaborations, boutique commercial interiors, or advanced parametric spatial workflows.
-            </p>
+          
           </div>
 
           {/* Right Direct Studio Contact card: Compact, Tactile, and Radiant (Bright Luxury Card) */}
