@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import brandLogoAdidas from "../assets/projects/adidas.png";
+import brandLogoAdidas from "../assets/projects/1.png";
 import brandLogoAlFuttaim from "../assets/projects/2.png";
-import brandLogoBueno from "../assets/projects/bueno.png";
+import brandLogoBueno from "../assets/projects/3.png";
 import brandLogoRadisson from "../assets/projects/5.png";
 import brandLogoON from "../assets/projects/6.png";
-import brandLogoSeiko from "../assets/projects/seiko.png";
-import brandLogoWasl from "../assets/projects/8.png";
-import brandLogoY3 from "../assets/projects/y3.png";
+import brandLogoSeiko from "../assets/projects/4.png";
+import brandLogoWasl from "../assets/projects/7.png";
+import brandLogoY3 from "../assets/projects/8.png";
 import profileImg from "@/src/assets/projects/8.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
