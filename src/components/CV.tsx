@@ -5,10 +5,10 @@ import brandLogoAlFuttaim from "../assets/projects/2.png";
 import brandLogoBueno from "../assets/projects/3.jpg";
 import brandLogoRadisson from "../assets/projects/5.png";
 import brandLogoON from "../assets/projects/6.png";
-import brandLogoSeiko from "../assets/projects/4.png";
+import brandLogoSeiko from "../assets/projects/4.jpg";
 import brandLogoWasl from "../assets/projects/7.jpg";
 import brandLogoY3 from "../assets/projects/8.png";
-import brandLogoY33 from "../assets/projects/9.png";
+import brandLogoY33 from "../assets/projects/9.jpg";
 import profileImg from "@/src/assets/projects/8.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
