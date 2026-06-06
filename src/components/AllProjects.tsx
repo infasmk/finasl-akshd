@@ -161,12 +161,12 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
         ) : (
           <div className="space-y-12">
             {/* Main Projects Section */}
-            {filteredProjects.filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id)).length > 0 && (
+            {filteredProjects.filter(p => p.category !== "AI Concept").length > 0 && (
               <div className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   <AnimatePresence mode="popLayout">
                     {filteredProjects
-                      .filter(p => ["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
+                      .filter(p => p.category !== "AI Concept")
                       .map((project: Project, idx) => {
                         const isActive = activeTouchId === project.id;
                         return (
@@ -240,7 +240,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
             )}
 
             {/* AI Concept Exploration Section Header */}
-            {filteredProjects.filter(p => !["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id)).length > 0 && (
+            {filteredProjects.filter(p => p.category === "AI Concept").length > 0 && (
               <div className="space-y-6 pt-10 border-t border-white/10">
                 <div className="space-y-1.5 text-left">
                   <span className="font-mono text-[9px] tracking-[0.35em] text-gold uppercase font-bold block">
@@ -255,7 +255,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   <AnimatePresence mode="popLayout">
                     {filteredProjects
-                      .filter(p => !["adidas", "bueno", "aldar-eastern-mangrovbs", "seiko-dubai-mall", "edit-d-essence", "adidas-y3"].includes(p.id))
+                      .filter(p => p.category === "AI Concept")
                       .map((project: Project, idx) => {
                         const isActive = activeTouchId === project.id;
                         return (
