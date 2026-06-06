@@ -55,7 +55,7 @@ export default function Hero() {
               className="font-sans text-2xl min-[360px]:text-3xl min-[400px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold tracking-tight leading-none text-white uppercase"
               style={{ color: "#ffffff" }}
             >
-              ARCHITECTURE
+                  Akash Sudhakar
             </motion.h1>
 
             <motion.p
