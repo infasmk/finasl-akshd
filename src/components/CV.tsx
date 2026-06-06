@@ -204,13 +204,12 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { value: "3+", label: "Years Experience" },
     { value: "200+", label: "Projects Completed" },
     { value: "200,000+", label: "Sq.ft Designed" },
-    
   ];
 
   const CAREER_TIMELINE = [
-     {
+    {
       period: "2026 - Present",
-      title: "CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
+      title: "CO-ORDINATOR & RETAIL CONCEPTUAL DESIGNER",
       location: "",
       stats: "",
     },
@@ -263,7 +262,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   ];
 
   return (
-    <div className="pt-24 pb-0 min-h-screen text-neutral-800 relative z-10 w-full bg-[#FAF9F5]">
+    <div id="cv-root" className="pt-24 pb-0 min-h-screen text-neutral-800 relative z-10 w-full bg-[#FAF9F5]">
       {/* Visual Background Blueprint System & Fine Grid Lines */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.06] select-none z-0 overflow-hidden">
         <div className="w-full h-full bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -272,12 +271,13 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <div className="w-full h-full border-l border-r border-[#C5A059]/20 max-w-7xl mx-auto" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 animate-fade-in">
         
         {/* Navigation & Header Actions */}
         <div className="pb-6 border-b border-neutral-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
           <button
             onClick={onBackToHome}
+            id="back-to-gallery-btn"
             className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-[#B28B45] uppercase hover:text-neutral-900 transition-colors duration-300 cursor-pointer focus:outline-none"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
@@ -292,7 +292,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
                 AKASH SUDHAKAR
               </h1>
-              <h2 className="font-mono text-xs tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
+              <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
                 Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
               </h2>
             </div>
@@ -313,8 +313,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* PROFILE SECTION */}
         <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-           
-            <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+            <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
               PROFILE
             </h2>
           </div>
@@ -349,8 +348,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* EXPERIENCE SECTION */}
         <section id="cv-experience" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-           
-            <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+            <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
               PROFESSIONAL EXPERIENCE
             </h2>
           </div>
@@ -389,8 +387,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* CLIENTS & BRANDS SECTION */}
         <section id="cv-brands" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 border-t border-neutral-200 mb-24">
           <div className="lg:col-span-4">
-           
-            <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+            <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
               CLIENTS & BRANDS
             </h2>
           </div>
@@ -423,13 +420,10 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <section id="cv-responsibilities" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 space-y-8">
             <div>
-            
-              <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+              <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
                 RESPONSIBILITIES
               </h2>
             </div>
-            
-          
           </div>
 
           <div className="lg:col-span-8 space-y-12">
@@ -492,8 +486,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* SKILLS SECTION */}
         <section id="cv-skills" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-          
-            <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+            <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
               DESIGN SOFTWARE
             </h2>
           </div>
@@ -516,8 +509,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* AI TOOLS SECTION */}
         <section id="cv-ai-tools" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4">
-           
-            <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
+            <h2 className="font-serif text-2xl md:text-3xl text-neutral-900 font-extralight tracking-tight uppercase">
               AI VISUALIZATION & CREATIVE TOOLS
             </h2>
           </div>
@@ -540,7 +532,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* EDUCATION & LANGUAGES SECTIONS IN SPLIT */}
         <section id="cv-education" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
           <div className="lg:col-span-4 font-normal">
-          
             <h2 className="font-serif text-2xl text-neutral-900 font-extralight tracking-tight uppercase">
               CREDENTIALS & LANGUAGES
             </h2>
@@ -599,114 +590,94 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
       </div>
 
       {/* CONTACT SECTION — Fluid Full Width with no gap to footer */}
-       <section
-      id="contact"
-      className="relative w-full pt-28 pb-16 md:pt-40 md:pb-24 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
-    >
-      {/* Dynamic light highlight glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
+      <section
+        id="contact"
+        className="relative w-full pt-28 pb-16 md:pt-40 md:pb-24 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
+      >
+        {/* Dynamic light highlight glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Intro Text Column */}
-           <div className="lg:col-span-5 space-y-5">
-            
-            <h2 className="font-serif text-[18px] sm:text-xl md:text-[23px] lg:text-2xl text-luxury-text font-light tracking-wider uppercase leading-snug">
-              THANK YOU , LOOKING FORWARD TO WORK WITH YOU
-            </h2>
-         
-          </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Left Intro Text Column */}
+            <div className="lg:col-span-5 space-y-5">
+              <h2 className="font-serif text-[18px] sm:text-xl md:text-[23px] lg:text-2xl text-luxury-text font-light tracking-wider uppercase leading-snug">
+                THANK YOU , LOOKING FORWARD TO WORK WITH YOU
+              </h2>
+            </div>
 
-          {/* Right Direct Studio Contact card: Compact, Tactile, and Radiant (Bright Luxury Card) */}
-          <div className="lg:col-span-7 flex justify-center lg:justify-end items-center">
-            <div className="w-full max-w-[440px] bg-[#FCFCFC] border-2 border-[#EAEAEA] p-6 md:p-7 relative shadow-2xl rounded-xl overflow-hidden hover:border-[#C5A059]/40 transition-all duration-500 group">
-              
-              {/* Card Texture Glare & Shimmer Effects */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-[#C5A059]/5 rounded-full blur-2xl pointer-events-none group-hover:bg-[#C5A059]/15 transition-all duration-500" />
-              <div className="absolute -left-20 -top-20 w-40 h-40 bg-black/[0.01] rounded-full blur-3xl pointer-events-none group-hover:translate-x-12 group-hover:translate-y-12 transition-all duration-700" />
+            {/* Right Direct Studio Contact card */}
+            <div className="lg:col-span-7 flex justify-center lg:justify-end items-center">
+              <div className="w-full max-w-[440px] bg-[#FCFCFC] border-2 border-[#EAEAEA] p-6 md:p-7 relative shadow-2xl rounded-xl overflow-hidden hover:border-[#C5A059]/40 transition-all duration-500 group">
+                <div className="absolute top-0 right-0 w-16 h-16 bg-[#C5A059]/5 rounded-full blur-2xl pointer-events-none group-hover:bg-[#C5A059]/15 transition-all duration-500" />
+                <div className="absolute -left-20 -top-20 w-40 h-40 bg-black/[0.01] rounded-full blur-3xl pointer-events-none group-hover:translate-x-12 group-hover:translate-y-12 transition-all duration-700" />
 
-              {/* Classic Golden Double Accent Corners (Physical Card Detail) */}
-              
-
-              {/* Inner Exquisite Card Frame */}
-              <div className="border border-neutral-100 rounded-lg p-5 bg-white relative z-10 space-y-6">
-                
-                {/* Header: Brand Identity */}
-                <div className="flex justify-between items-start">
-                  <div className="space-y-1">
+                {/* Inner Exquisite Card Frame */}
+                <div className="border border-neutral-100 rounded-lg p-5 bg-white relative z-10 space-y-6">
                   
-                    <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
-                    AKASH SUNDHAKAR
-                    </h3>
-                  </div>
-                  {/* Fine logo graphic */}
-                 
-                </div>
-
-                {/* Core Metadata List (Compact & Clean) */}
-                <div className="space-y-3 pt-2 text-[11px]">
-                  
-                  {/* Name detail card */}
-                  {/* <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
-                    <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">NAME</span>
-                    <span className="font-serif text-sm text-neutral-905 font-light tracking-wide uppercase">AJAY</span>
-                  </div> */}
-
-                  {/* Phone detail card */}
-                  <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
-                    <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">TEL</span>
-                    <a href="tel:+971525672314" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
-                      +971 52 567 2314
-                    </a>
+                  {/* Header: Brand Identity */}
+                  <div className="flex justify-between items-start">
+                    <div className="space-y-1">
+                      <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
+                        AKASH SUDHAKAR
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Email detail card */}
-                  <div className="flex justify-between items-center pb-1">
-                    <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
-                    <a href="mailto:arakshsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
-                      arakshsudhakar@gmail.com
-                    </a>
+                  {/* Core Metadata List (Compact & Clean) */}
+                  <div className="space-y-3 pt-2 text-[11px]">
+                    {/* Phone detail card */}
+                    <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
+                      <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">TEL</span>
+                      <a href="tel:+971525672314" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
+                        +971 52 567 2314
+                      </a>
+                    </div>
+
+                    {/* Email detail card */}
+                    <div className="flex justify-between items-center pb-1">
+                      <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
+                      <a href="mailto:arakshsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
+                        arakshsudhakar@gmail.com
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* Brand-Colored Connected Portals at Base */}
-                <div className="pt-4 border-t border-neutral-100 space-y-3">
-                 
-                  
-                  <div className="flex gap-4 justify-start">
-                    {/* WhatsApp Action */}
-                    <a 
-                      href="https://wa.me/971525672314" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#25D366] hover:border-[#25D366] rounded-full transition-all duration-300"
-                      title="Connect on WhatsApp"
-                    >
-                      <MessageCircle className="w-5 h-5 stroke-[1.5]" />
-                    </a>
+                  {/* Brand-Colored Connected Portals at Base */}
+                  <div className="pt-4 border-t border-neutral-100 space-y-3">
+                    <div className="flex gap-4 justify-start">
+                      {/* WhatsApp Action */}
+                      <a 
+                        href="https://wa.me/971525672314" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#25D366] hover:border-[#25D366] rounded-full transition-all duration-300"
+                        title="Connect on WhatsApp"
+                      >
+                        <MessageCircle className="w-5 h-5 stroke-[1.5]" />
+                      </a>
 
-                    {/* LinkedIn Action */}
-                    <a 
-                      href="https://linkedin.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#0A66C2] hover:border-[#0A66C2] rounded-full transition-all duration-300"
-                      title="Connect on LinkedIn"
-                    >
-                      <Linkedin className="w-5 h-5 fill-current" />
-                    </a>
+                      {/* LinkedIn Action */}
+                      <a 
+                        href="https://linkedin.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-[#0A66C2] hover:text-[#0A66C2] hover:border-[#0A66C2] rounded-full transition-all duration-300"
+                        title="Connect on LinkedIn"
+                      >
+                        <Linkedin className="w-5 h-5 fill-current" />
+                      </a>
 
-                    {/* Email Action */}
-                    <a 
-                      href="mailto:arakshsudhakar@gmail.com" 
-                      className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
-                      title="Send Email"
-                    >
-                      <Mail className="w-5 h-5 stroke-[1.5]" />
-                    </a>
+                      {/* Email Action */}
+                      <a 
+                        href="mailto:arakshsudhakar@gmail.com" 
+                        className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
+                        title="Send Email"
+                      >
+                        <Mail className="w-5 h-5 stroke-[1.5]" />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
               </div>
             </div>
@@ -715,7 +686,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
       </div>
       </section>
-
     </div>
   );
 }
