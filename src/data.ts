@@ -33,6 +33,25 @@ import vImg from "./assets/projects/all/v.png";
 import wImg from "./assets/projects/all/w.png";
 import xImg from "./assets/projects/all/x.png";
 import yImg from "./assets/projects/all/y.png";
+import aImg from "./assets/projects/ai/555.png";
+ import bImg from "./assets/projects/ai/BCB.png";
+  import cImg from "./assets/projects/ai/DFGFG.png";
+   import dImg from "./assets/projects/ai/DZGZFDG.png";
+    import eImg from "./assets/projects/ai/SDSD.png";
+     import fImg from "./assets/projects/ai/Untitled-1.png"; 
+     import gImg from "./assets/projects/ai/UTTYU.png";
+      import hImg from "./assets/projects/ai/FGDFGD.png";
+       import iImg from "./assets/projects/ai/FGFD.png"; 
+       import jImg from "./assets/projects/ai/FGHF.png";
+        import kImg from "./assets/projects/ai/FS.png";
+         import lImg from "./assets/projects/ai/GDFG.png"; 
+         import mImg from "./assets/projects/ai/HH.png"; 
+         import nImg from "./assets/projects/ai/RDGDG.png";
+          import oImg from "./assets/projects/ai/RETER.png";
+           import pImg from "./assets/projects/ai/2.png";
+            import qImg from "./assets/projects/ai/52.png"; 
+            import rImg from "./assets/projects/ai/55.png";
+             import sImg from "./assets/projects/ai/85.png";
 
 export interface Project {
   id: string;
@@ -411,50 +430,25 @@ export const PROJECTS: Project[] = [
   paymentPlan: "",
   description: "",
 },
-  {
-    id: "concept-chronos",
-    title: "CHRONOS COMPLEX",
-    subtitle: "AI-Generated Skyscraper Exploration",
-    location: "Downtown Dubai",
-    image: concept1Img,
-    category: "AI Concept",
-    startingPrice: "AED 9,500,000",
-    paymentPlan: "80/20",
-    description: "An iconic, tall parametric spire twisting gracefully above the Dubai skyline, showcasing integrated solar glazing, fluid floor plans, and sky-garden structural intervals.",
-  },
-  {
-    id: "concept-biophilic",
-    title: "BIOPHILIC PLAZA",
-    subtitle: "Organic Patterns & Sustainable Concept",
-    location: "Business Bay",
-    image: concept2Img,
-    category: "AI Concept",
-    startingPrice: "AED 7,200,000",
-    paymentPlan: "70/30",
-    description: "A visionary urban public plaza marrying high-density commercial spaces with self-watering vertical bio-walls, natural waterfall air cooling, and cascading botanical balconies.",
-  },
-  {
-    id: "concept-zenith",
-    title: "ZENITH RESIDENCES",
-    subtitle: "Parametric Geometry & Golden Light Study",
-    location: "Jumeirah Village Circle (JVC)",
-    image: concept3Img,
-    category: "AI Concept",
-    startingPrice: "AED 4,800,000",
-    paymentPlan: "60/40",
-    description: "A dual-tower luxury residence framed by gorgeous gold-anodized facades, dramatic glass sky-bridges, and premium private infinity pools for every single penthouse suite.",
-  },
-  {
-    id: "concept-galaxy",
-    title: "GALAXY SHORELINE",
-    subtitle: "Liquid Architecture & Floating Pavilions",
-    location: "Dubai Marina Waterfront",
-    image: concept4Img,
-    category: "AI Concept",
-    startingPrice: "AED 11,500,000",
-    paymentPlan: "50/50",
-    description: "A mesmerizing collection of fluid waterfront pavilions that appear to float on the Marina, offering seamless indoor-outdoor connections and dynamic sun-tracking louvers.",
-  },
+  { id: "555", title: "", subtitle: "", location: "", image: aImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+   { id: "BCB", title: "", subtitle: "", location: "", image: bImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+    { id: "DFGFG", title: "", subtitle: "", location: "", image: cImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+     { id: "DZGZFDG", title: "", subtitle: "", location: "", image: dImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", }, 
+     { id: "SDSD", title: "", subtitle: "", location: "", image: eImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", }, 
+     { id: "Untitled-1", title: "", subtitle: "", location: "", image: fImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+      { id: "UTTYU", title: "", subtitle: "", location: "", image: gImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+       { id: "FGDFGD", title: "", subtitle: "", location: "", image: hImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+        { id: "FGFD", title: "", subtitle: "", location: "", image: iImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", }, 
+        { id: "FGHF", title: "", subtitle: "", location: "", image: jImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", }, 
+        { id: "FS", title: "", subtitle: "", location: "", image: kImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+        { id: "GDFG", title: "", subtitle: "", location: "", image: lImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", }, 
+        { id: "HH", title: "", subtitle: "", location: "", image: mImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+         { id: "RDGDG", title: "", subtitle: "", location: "", image: nImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+          { id: "RETER", title: "", subtitle: "", location: "", image: oImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+           { id: "2", title: "", subtitle: "", location: "", image: pImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+            { id: "52", title: "", subtitle: "", location: "", image: qImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+             { id: "55", title: "", subtitle: "", location: "", image: rImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+              { id: "85", title: "", subtitle: "", location: "", image: sImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", } 
 
 ];
 
