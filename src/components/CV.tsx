@@ -293,7 +293,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                 AKASH SUDHAKAR
               </h1>
               <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
-                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
+                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Designer <span className="text-[#C5A059] mx-2">|</span> 3D Visualizer
               </h2>
             </div>
           </div>

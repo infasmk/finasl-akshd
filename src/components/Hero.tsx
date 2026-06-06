@@ -64,7 +64,7 @@ export default function Hero() {
               className="text-xs md:text-sm font-sans font-light text-gray-300 max-w-md leading-relaxed tracking-wider uppercase"
               style={{ color: "#d1d5db" }}
             >
-               THAT MOVES PEOPLE.
+                               Architect <span className="text-[#C5A059] mx-2">|</span> Retail Designer <span className="text-[#C5A059] mx-2">|</span> 3D Visualizer
             </motion.p>
           </div>
 
