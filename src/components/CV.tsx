@@ -8,7 +8,7 @@ import brand5 from "@/src/assets/projects/5.png";
 import brand6 from "@/src/assets/projects/6.png";
 import brand7 from "@/src/assets/projects/7.jpg";
 import brand8 from "@/src/assets/projects/8.png";
-import profileImg from "../assets/images/akash_profile_1780723414316.png";
+import profileImg from "@/src/assets/projects/pro.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
   Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
