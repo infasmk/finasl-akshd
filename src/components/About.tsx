@@ -29,11 +29,9 @@ export default function About() {
           {/* Conceptual description */}
           <div className="space-y-6 text-gray-300 font-sans font-light text-sm md:text-base leading-relaxed tracking-wide max-w-2xl mx-auto text-center">
             <p>
-              ARCHITECTURE is not merely a developer; it is an avant-garde design house rewriting the lifestyle rules of the world's most dynamic metropolis. With a design philosophy centered around bold, heavy-scale geometric architecture, we craft spaces that serve as timeless sculptural monuments on the Dubai skyline.
+          Architect with 3 years of experience in shaping functional and impactful spaces across interiors, retail, workplaces, residential, and F&B sectors. Passionate about delivering concept-driven, user-centered designs that authentically reflect brand identity while enriching the human experience. Known for a collaborative approach, meticulous attention to detail, and a strong commitment to design excellence through thoughtful detailing and purpose-led work.
             </p>
-            <p>
-              By combining high-end industrial engineering with bespoke craftsmanship, every residence is customized down to the finest detail. Driven by the relentless pursuit of artistic distinction and strategic positioning, a ARCHITECTURE address acts as an appreciating asset, an engineering marvel, and a badge of pure residential triumph.
-            </p>
+            
           </div>
         </motion.div>
       </div>
