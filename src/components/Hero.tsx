@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import heroImg from "../assets/projects/hero.jpg";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -26,8 +27,8 @@ export default function Hero() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600"
-          alt="Premium Dubai Skyline Sunset"
+          src={heroImg}
+          alt="Premium Architecture Concept Hero"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover select-none filter brightness-70 contrast-110"
         />
