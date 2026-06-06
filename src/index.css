@@ -27,7 +27,7 @@ html.light-theme {
 }
 
 @theme {
-  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-serif: "Helvetica Neue", "Plus Jakarta Sans", "Inter", sans-serif;
   --font-sans: "Helvetica Neue", "Plus Jakarta Sans", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --color-gold: #C5A059;
