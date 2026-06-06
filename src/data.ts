@@ -27,7 +27,7 @@ import pImg from "./assets/projects/all/p.jpg";
 import qImg from "./assets/projects/all/q.png";
 import rImg from "./assets/projects/all/r.jpeg";
 import sImg from "./assets/projects/all/s.png";
-import tImg from "./assets/projects/all/t.png";
+import tImg from "./assets/projects/all/t.jpeg";
 import uImg from "./assets/projects/all/u.png";
 import vImg from "./assets/projects/all/v.png";
 import wImg from "./assets/projects/all/w.png";
