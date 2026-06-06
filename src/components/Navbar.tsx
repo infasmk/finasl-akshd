@@ -69,10 +69,10 @@ export default function Navbar({
             className="flex items-center space-x-2 group focus:outline-none cursor-pointer"
           >
             <span
-              className="font-serif tracking-[0.3em] text-xl font-bold transition-colors duration-300"
+              className="font-serif tracking-[0.05em] text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold transition-colors duration-300 block"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
             >
-              AK
+              Akash Sudhakar
             </span>
             <span
               className="text-[8px] font-mono tracking-widest uppercase hidden sm:inline-block transition-colors duration-300 animate-pulse ml-2"
