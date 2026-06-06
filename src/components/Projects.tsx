@@ -16,7 +16,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
     <section
       ref={sectionRef}
       id="projects"
-      className="relative w-full py-12 md:py-16 bg-luxury-black text-white border-b border-white/5"
+      className="relative w-full pt-20 pb-28 md:pt-32 md:pb-40 bg-luxury-black text-white border-b border-white/5"
     >
       {/* Absolute floating lights */}
       <div className="absolute top-[20%] right-[-15%] w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
@@ -43,7 +43,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
         {/* 6 Grid Cards */}
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 md:mb-32"
         >
           {PROJECTS.slice(0, 6).map((project: Project, idx) => {
             const isActive = activeTouchId === project.id;
@@ -122,7 +122,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
         </div>
 
         {/* View More Button */}
-        <div className="text-center">
+        <div className="text-center mt-12 md:mt-20">
           <button
             onClick={() => {
               if (onViewAllProjects) {

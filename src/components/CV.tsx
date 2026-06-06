@@ -347,26 +347,26 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8 space-y-10">
-            <div className="relative border-l border-[#C5A059]/30 pl-6 ml-4 space-y-16">
+            <div className="relative border-l border-[#C5A059]/30 pl-6 ml-4 space-y-10">
               {CAREER_TIMELINE.map((item, idx) => (
                 <div key={idx} className="relative group">
-                  <div className="absolute -left-[31px] top-1.5 w-4 h-4 bg-[#FAF9F5] border-2 border-[#C5A059] rounded-none rotate-45 group-hover:bg-[#C5A059] group-hover:rotate-[135deg] transition-all duration-500 ease-out" />
+                  <div className="absolute -left-[31px] top-1 w-3.5 h-3.5 bg-[#FAF9F5] border-2 border-[#C5A059] rounded-none rotate-45 group-hover:bg-[#C5A059] group-hover:rotate-[135deg] transition-all duration-500 ease-out z-10" />
                   
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-2.5">
-                      <span className="font-mono text-[10px] tracking-widest text-[#B28B45] font-bold block uppercase bg-[#C5A059]/10 px-3 py-1">
+                      <span className="font-mono text-[8px] tracking-widest text-[#B28B45] font-bold block uppercase bg-[#C5A059]/10 px-2.5 py-0.5">
                         {item.period}
                       </span>
-                      <span className="font-mono text-[8px] tracking-[0.2em] text-[#B28B45] uppercase font-bold">
+                      <span className="font-mono text-[7px] tracking-[0.2em] text-[#B28B45] uppercase font-bold">
                         {item.stats}
                       </span>
                     </div>
 
                     <div>
-                      <h4 className="font-serif text-2xl font-light text-neutral-900 tracking-wide uppercase">
+                      <h4 className="font-serif text-[11px] md:text-[13px] font-normal text-neutral-900 tracking-wider uppercase">
                         {item.title}
                       </h4>
-                      <p className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest mt-1">
+                      <p className="text-[8px] font-mono text-neutral-400 uppercase tracking-widest mt-0.5">
                         {item.location}
                       </p>
                     </div>
@@ -609,7 +609,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
       {/* CONTACT SECTION — Fluid Full Width with no gap to footer */}
        <section
       id="contact"
-      className="relative w-full py-12 md:py-16 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
+      className="relative w-full pt-28 pb-16 md:pt-40 md:pb-24 bg-luxury-dark/30 text-white overflow-hidden border-t border-luxury-border"
     >
       {/* Dynamic light highlight glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
@@ -620,7 +620,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           {/* Left Intro Text Column */}
            <div className="lg:col-span-5 space-y-5">
             
-            <h2 className="font-serif text-3xl md:text-5xl text-luxury-text font-extralight tracking-tight uppercase leading-tight">
+            <h2 className="font-serif text-[18px] sm:text-xl md:text-[23px] lg:text-2xl text-luxury-text font-light tracking-wider uppercase leading-snug">
               THANK YOU , LOOKING FORWARD TO WORK WITH YOU
             </h2>
          
