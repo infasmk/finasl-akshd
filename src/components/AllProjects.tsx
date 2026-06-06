@@ -278,13 +278,11 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                             }}
                             key={project.id}
                             onClick={() => handleCardTouch(project.id)}
-                            className={`border overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer ${
-                              isActive
-                                ? "bg-luxury-dark border-gold/50 shadow-2xl scale-[1.01]"
-                                : "bg-luxury-dark/95 border-white/5 hover:border-gold/30 shadow-sm"
+                            className={`overflow-hidden group flex flex-col justify-between transition-all duration-500 cursor-pointer bg-transparent border-none ${
+                              isActive ? "scale-[1.01]" : ""
                             }`}
                           >
-                            <div className="relative w-full h-[140px] min-[480px]:h-[170px] md:h-[200px] overflow-hidden">
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                               <img
                                 src={project.image}
                                 alt={`${project.title}`}
@@ -296,16 +294,16 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
 
                               {/* Award icon badge for concept visual */}
                               <div className="absolute top-3 right-3 z-20">
-                                <div className="w-6 h-6 rounded-full bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-gold">
+                                <div className="w-6 h-6 rounded-full bg-black/75 backdrop-blur-md border border-white/10 flex items-center justify-center text-gold">
                                   <Award className="w-3 h-3 animate-pulse" />
                                 </div>
                               </div>
                             </div>
 
                             {/* Content details */}
-                            <div className="p-3.5 sm:p-5 space-y-3 flex-grow flex flex-col justify-center">
+                            <div className="pt-4 pb-2 space-y-2 flex-grow flex flex-col justify-start">
                               <div className="space-y-1">
-                                <h3 className={`font-serif text-xs min-[400px]:text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
+                                <h3 className={`font-serif text-sm sm:text-base font-normal leading-tight transition-colors duration-300 ${
                                   isActive ? "text-gold" : "text-white group-hover:text-gold"
                                 }`}>
                                   {project.title}

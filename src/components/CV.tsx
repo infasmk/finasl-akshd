@@ -8,7 +8,7 @@ import brand5 from "@/src/assets/projects/5.png";
 import brand6 from "@/src/assets/projects/6.png";
 import brand7 from "@/src/assets/projects/7.jpg";
 import brand8 from "@/src/assets/projects/8.png";
-import brand9 from "@/src/assets/projects/9.jpg";
+import profileImg from "../assets/images/akash_profile_1780723414316.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
   Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
@@ -285,19 +285,27 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         </div>
 
         {/* HERO SECTION */}
-        <section id="cv-hero" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12">
-          <div className="lg:col-span-12 space-y-6 max-w-4xl">
+        <section id="cv-hero" className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-12">
+          <div className="md:col-span-8 lg:col-span-9 space-y-4">
             <div className="space-y-2">
-            
-              <h1 className="font-serif text-5xl md:text-7xl font-extralight text-neutral-900 leading-tight tracking-tight">
-                AKASH  SUDHAKAR
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
+                AKASH SUDHAKAR
               </h1>
-              <h2 className="font-mono text-xs md:text-sm tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
+              <h2 className="font-mono text-xs tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
                 Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
               </h2>
             </div>
-
-            
+          </div>
+          <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border border-[#C5A059]/40 p-1 bg-[#FAF9F5] shadow-xl hover:scale-[1.03] transition-transform duration-500">
+              <img
+                src={profileImg}
+                alt="Akash Sudhakar Profile"
+                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 select-none"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 rounded-full border border-neutral-200/50 pointer-events-none" />
+            </div>
           </div>
         </section>
 
@@ -312,7 +320,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
           <div className="lg:col-span-8 space-y-8">
             <p className="text-neutral-700 font-sans text-base md:text-lg font-light leading-relaxed">
-              Architect with 3 years of experience in shaping functional and impactful spaces across interiors, retail, workplaces, residential, and F&B sectors. Passionate about delivering concept-driven, user-centered designs that authentically reflect brand identity while enriching the human experience. Known for a collaborative approach, meticulous attention to detail, and a strong commitment to design excellence through thoughtful detailing and purpose-led work.
+              Architect with 3 years of experience in shaping functional and impactful spaces across interiors, retail, workplaces, residential, and F&B sectors, collaborating with <strong className="font-semibold text-neutral-900 border-b border-[#C5A059]/30">10+ Global Brands</strong>. Passionate about delivering concept-driven, user-centered designs that authentically reflect brand identity while enriching the human experience. Known for a collaborative approach, meticulous attention to detail, and a strong commitment to design excellence through thoughtful detailing and purpose-led work.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
@@ -387,33 +395,22 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-10">
               {BRANDS.map((brand, bIdx) => (
                 <div
                   key={bIdx}
-                  className="relative group p-6 flex flex-col justify-center items-center h-28 text-center transition-all duration-300 cursor-default overflow-hidden"
+                  className="relative group flex flex-col justify-center items-center h-20 text-center cursor-default bg-transparent"
                 >
-                  <div className="z-10 group-hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center">
-                    {brand.logo ? (
-                      <img
-                        src={brand.logo}
-                        alt={`${brand.name} Logo`}
-                        className="max-h-12 max-w-[120px] object-contain select-none pointer-events-none filter grayscale hover:grayscale-0 transition-all duration-300"
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <div className="flex flex-col items-center justify-center p-2 text-center">
-                        <span className="font-serif text-xs min-h-[14px] font-medium text-neutral-800 uppercase tracking-widest leading-none">
-                          {brand.name}
-                        </span>
-                      </div>
-                    )}
-                    
-                    <div className="relative h-4 overflow-hidden mt-2 px-1">
-                      <p className="text-[8px] font-mono tracking-widest text-[#B28B45] uppercase transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0">
-                        {brand.type}
-                      </p>
-                    </div>
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} Logo`}
+                    className="max-h-12 max-w-[120px] object-contain select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="mt-2 text-center h-3">
+                    <span className="font-mono text-[7px] tracking-[0.2em] text-[#B28B45] uppercase font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 block">
+                      {brand.name}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -501,19 +498,16 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="bg-white border border-neutral-200 p-6 md:p-8 hover:border-[#C5A059]/35 hover:shadow-lg hover:shadow-neutral-100 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-2 h-2 bg-[#C5A059]" />
-              <div className="flex flex-wrap gap-2.5">
-                {SKILLS.map((skill, sIdx) => (
-                  <div
-                    key={sIdx}
-                    className="px-3.5 py-1.5 bg-neutral-50 hover:bg-[#C5A059]/10 border border-neutral-200 hover:border-[#C5A059]/40 transition-all duration-300 flex items-center space-x-2 text-xs font-mono tracking-wider text-neutral-800"
-                  >
-                    <span className="text-[#C5A059]/80 text-[10px]">✦</span>
-                    <span className="font-semibold">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-x-8 gap-y-5">
+              {SKILLS.map((skill, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="flex items-center space-x-2 text-xs font-mono tracking-wider text-neutral-800"
+                >
+                  <span className="text-[#C5A059] font-bold text-[11px]">✦</span>
+                  <span className="font-semibold">{skill.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -528,19 +522,16 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="bg-white border border-neutral-200 p-6 md:p-8 hover:border-[#C5A059]/35 hover:shadow-lg hover:shadow-neutral-100 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-2 h-2 bg-[#C5A059]" />
-              <div className="flex flex-wrap gap-2.5">
-                {AI_TOOLS.map((tool, tIdx) => (
-                  <div
-                    key={tIdx}
-                    className="px-3.5 py-1.5 bg-neutral-50 hover:bg-[#C5A059]/10 border border-neutral-200 hover:border-[#C5A059]/40 transition-all duration-300 flex items-center space-x-2 text-xs font-mono tracking-wider text-neutral-800"
-                  >
-                    <Sparkles className="w-3.5 h-3.5 text-[#B28B45]" />
-                    <span className="font-serif text-xs uppercase tracking-wide font-medium">{tool.name}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-x-8 gap-y-5">
+              {AI_TOOLS.map((tool, tIdx) => (
+                <div
+                  key={tIdx}
+                  className="flex items-center space-x-2 text-xs font-mono tracking-wider text-neutral-800"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-[#B28B45]" />
+                  <span className="font-serif text-xs uppercase tracking-wide font-medium">{tool.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -664,16 +655,16 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                   {/* Phone detail card */}
                   <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">TEL</span>
-                    <a href="tel:+971501234567" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
-                      +971 50 123 4567
+                    <a href="tel:+971525672314" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
+                      +971 52 567 2314
                     </a>
                   </div>
 
                   {/* Email detail card */}
                   <div className="flex justify-between items-center pb-1">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
-                    <a href="mailto:akashsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
-                      akashsudhakar@gmail.com
+                    <a href="mailto:arakshsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
+                      arakshsudhakar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -685,7 +676,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                   <div className="flex gap-4 justify-start">
                     {/* WhatsApp Action */}
                     <a 
-                      href="https://wa.me/971501234567" 
+                      href="https://wa.me/971525672314" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#25D366] hover:border-[#25D366] rounded-full transition-all duration-300"
@@ -707,7 +698,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
                     {/* Email Action */}
                     <a 
-                      href="mailto:akashsudhakar@gmail.com" 
+                      href="mailto:arakshsudhakar@gmail.com" 
                       className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
                       title="Send Email"
                     >

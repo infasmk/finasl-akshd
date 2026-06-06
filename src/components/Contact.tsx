@@ -71,16 +71,16 @@ export default function Contact() {
                   {/* Phone detail card */}
                   <div className="flex justify-between items-center pb-2.5 border-b border-neutral-100">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">TEL</span>
-                    <a href="tel:+971501234567" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
-                      +971 50 123 4567
+                    <a href="tel:+971525672314" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors font-semibold">
+                      +971 52 567 2314
                     </a>
                   </div>
 
                   {/* Email detail card */}
                   <div className="flex justify-between items-center pb-1">
                     <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
-                    <a href="mailto:akashsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
-                      akashsudhakar@gmail.com
+                    <a href="mailto:arakshsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
+                      arakshsudhakar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function Contact() {
                   <div className="flex gap-4 justify-start">
                     {/* WhatsApp Action */}
                     <a 
-                      href="https://wa.me/971501234567" 
+                      href="https://wa.me/971525672314" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#25D366] hover:border-[#25D366] rounded-full transition-all duration-300"
@@ -116,7 +116,7 @@ export default function Contact() {
 
                     {/* Email Action */}
                     <a 
-                      href="mailto:akashsudhakar@gmail.com" 
+                      href="mailto:arakshsudhakar@gmail.com" 
                       className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
                       title="Send Email"
                     >
