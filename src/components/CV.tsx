@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import brand1 from "@/src/assets/projects/1.jpg";
-import brand2 from "@/src/assets/projects/2.png";
-import brand3 from "@/src/assets/projects/3.jpg";
-import brand4 from "@/src/assets/projects/4.jpg";
-import brand5 from "@/src/assets/projects/5.png";
-import brand6 from "@/src/assets/projects/6.png";
-import brand7 from "@/src/assets/projects/7.jpg";
-import brand8 from "@/src/assets/projects/8.png";
-import profileImg from "@/src/assets/projects/pro.png";
+import brandLogoAdidas from "../assets/projects/adidas.png";
+import brandLogoAlFuttaim from "../assets/projects/2.png";
+import brandLogoBueno from "../assets/projects/bueno.png";
+import brandLogoRadisson from "../assets/projects/5.png";
+import brandLogoON from "../assets/projects/6.png";
+import brandLogoSeiko from "../assets/projects/seiko.png";
+import brandLogoWasl from "../assets/projects/8.png";
+import brandLogoY3 from "../assets/projects/y3.png";
+import profileImg from "@/src/assets/projects/8.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
   Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
@@ -229,15 +229,14 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
   // BRAND LISTING: Easily swap logos by adding local paths or raw GitHub image URLs to the 'logo' property below.
   const BRANDS = [
-    { name: "Adidas", logo: brand1, category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
-    { name: "Al Futtaim", logo: brand2, category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
-    { name: "Aldar", logo: brand3, category: "Community Renewal & Urban Regeneration Projects", type: "COMMERCIAL MASTER" },
-    { name: "Sephora", logo: brand4, category: "Luxury Cosmetic Boutiques & High-Traffic Retail", type: "RETAIL ENVIRONMENT" },
-    { name: "Radisson", logo: brand5, category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
-    { name: "ON", logo: brand6, category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
-    { name: "Seiko", logo: brand7, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
-    { name: "Wasl", logo: brand8, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
-    { name: "La Marquise", logo: brand9, category: "Boutique Fine Jewellery Concept Outlets", type: "RETAIL ENVIRONMENT" },
+    { name: "Adidas", logo: brandLogoAdidas, category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
+    { name: "Al Futtaim", logo: brandLogoAlFuttaim, category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
+    { name: "Bueno", logo: brandLogoBueno, category: "Gourmet Experience & Premium Outlets", type: "F&B CONCEPT" },
+    { name: "Radisson", logo: brandLogoRadisson, category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
+    { name: "ON", logo: brandLogoON, category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
+    { name: "Seiko", logo: brandLogoSeiko, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
+    { name: "Wasl", logo: brandLogoWasl, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
+    { name: "Adidas Y3", logo: brandLogoY3, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
   ];
 
   const SKILLS = [
