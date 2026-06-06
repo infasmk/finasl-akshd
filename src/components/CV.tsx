@@ -287,7 +287,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
         {/* HERO SECTION */}
         <section id="cv-hero" className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-12">
-          <div className="md:col-span-8 lg:col-span-9 space-y-4">
+          <div className="md:col-span-8 lg:col-span-9 space-y-4 order-2 md:order-1">
             <div className="space-y-2">
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
                 AKASH SUDHAKAR
@@ -297,7 +297,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               </h2>
             </div>
           </div>
-          <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end">
+          <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end order-1 md:order-2">
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border border-[#C5A059]/40 p-1 bg-[#FAF9F5] shadow-xl hover:scale-[1.03] transition-transform duration-500">
               <img
                 src={profileImg}
@@ -679,12 +679,11 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                     </div>
                   </div>
 
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
       </section>
     </div>
   );
