@@ -230,15 +230,15 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
   // BRAND LISTING: Easily swap logos by adding local paths or raw GitHub image URLs to the 'logo' property below.
   const BRANDS = [
-    { name: "Adidas", logo: brandLogoAdidas, category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
-    { name: "Al Futtaim", logo: brandLogoAlFuttaim, category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
-    { name: "Bueno", logo: brandLogoBueno, category: "Gourmet Experience & Premium Outlets", type: "F&B CONCEPT" },
-    { name: "Radisson", logo: brandLogoRadisson, category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
-    { name: "ON", logo: brandLogoON, category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
-    { name: "Seiko", logo: brandLogoSeiko, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
-    { name: "Wasl", logo: brandLogoWasl, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
-    { name: "Adidas Y3", logo: brandLogoY3, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
-    { name: "Adidas Y33", logo: brandLogoY33, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
+    { name: "", logo: brandLogoAdidas, category: "High-Performance Athletic Retail Environments", type: "RETAIL ENVIRONMENT" },
+    { name: "", logo: brandLogoAlFuttaim, category: "Conglomerate & Premium Commercial Spaces", type: "COMMERCIAL MASTER" },
+    { name: "", logo: brandLogoBueno, category: "Gourmet Experience & Premium Outlets", type: "F&B CONCEPT" },
+    { name: "", logo: brandLogoRadisson, category: "Premium Hospitality & Lounge Renovations", type: "COMMERCIAL MASTER" },
+    { name: "", logo: brandLogoON, category: "Premium Swiss Technical Performance Stores", type: "RETAIL ENVIRONMENT" },
+    { name: "", logo: brandLogoSeiko, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
+    { name: "", logo: brandLogoWasl, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
+    { name: "", logo: brandLogoY3, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
+    { name: "", logo: brandLogoY33, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
   ];
 
   const SKILLS = [
