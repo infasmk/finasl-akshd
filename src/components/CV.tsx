@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import brandLogoAdidas from "../assets/projects/1.png";
+import brandLogoAdidas from "../assets/projects/1.jpg";
 import brandLogoAlFuttaim from "../assets/projects/2.png";
-import brandLogoBueno from "../assets/projects/3.png";
+import brandLogoBueno from "../assets/projects/3.jpg";
 import brandLogoRadisson from "../assets/projects/5.png";
 import brandLogoON from "../assets/projects/6.png";
 import brandLogoSeiko from "../assets/projects/4.png";
-import brandLogoWasl from "../assets/projects/7.png";
+import brandLogoWasl from "../assets/projects/7.jpg";
 import brandLogoY3 from "../assets/projects/8.png";
+import brandLogoY33 from "../assets/projects/9.png";
 import profileImg from "@/src/assets/projects/8.png";
 import { 
   ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
@@ -237,6 +238,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { name: "Seiko", logo: brandLogoSeiko, category: "High-Horology Precision Interactive Showrooms", type: "RETAIL ENVIRONMENT" },
     { name: "Wasl", logo: brandLogoWasl, category: "Iconic Residential Developments & Hospitality", type: "COMMERCIAL MASTER" },
     { name: "Adidas Y3", logo: brandLogoY3, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
+    { name: "Adidas Y33", logo: brandLogoY33, category: "High-End Conceptual Designer Store", type: "RETAIL ENVIRONMENT" },
   ];
 
   const SKILLS = [
