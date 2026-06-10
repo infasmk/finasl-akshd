@@ -492,7 +492,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
                       {/* LinkedIn Action */}
                       <a 
-                        href="https://linkedin.com" 
+                        href="https://www.linkedin.com/in/akash-sudhakar-0219a4192?utm_source=share_via&utm_content=profile&utm_medium=member_ios" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-[#0A66C2] hover:text-[#0A66C2] hover:border-[#0A66C2] rounded-full transition-all duration-300"
