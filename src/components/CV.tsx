@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { motion } from "motion/react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import brandLogoAdidas from "../assets/projects/1.jpg";
 import brandLogoAlFuttaim from "../assets/projects/2.png";
 import brandLogoBueno from "../assets/projects/3.jpg";
@@ -9,9 +9,12 @@ import brandLogoSeiko from "../assets/projects/4.jpg";
 import brandLogoWasl from "../assets/projects/7.jpg";
 import brandLogoY3 from "../assets/projects/8.png";
 import brandLogoY33 from "../assets/projects/9.jpg";
-import profileImg from "@/src/assets/projects/image.png";
+import profileImg from "@/src/assets/projects/8.png";
 import { 
-  ArrowLeft, Mail, Globe, GraduationCap, Sparkles, MessageCircle, Linkedin
+  ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
+  Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
+  Layers3, Compass, HardHat, FileText, Smartphone, Laptop, CheckSquare,
+  Linkedin, MessageCircle
 } from "lucide-react";
 
 const renderBrandLogo = (name: string) => {
@@ -285,18 +288,13 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         {/* HERO SECTION */}
         <section id="cv-hero" className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-12">
           <div className="md:col-span-8 lg:col-span-9 space-y-4 order-2 md:order-1">
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
                 AKASH SUDHAKAR
               </h1>
-              <div className="space-y-2">
-                <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
-                  Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
-                </h2>
-                <p className="font-mono text-[10px] tracking-[0.3em] text-[#B28B45] uppercase font-bold border-l border-[#C5A059] pl-3">
-                  PIXEL DESIGN STUDIO
-                </p>
-              </div>
+              <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
+                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Designer <span className="text-[#C5A059] mx-2">|</span> 3D Visualizer
+              </h2>
             </div>
           </div>
           <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end order-1 md:order-2">
