@@ -1,190 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import React, { useEffect } from "react";
+import { motion } from "motion/react";
 import brandLogoAdidas from "../assets/projects/1.jpg";
 import brandLogoAlFuttaim from "../assets/projects/2.png";
-import brandLogoBueno from "../assets/projects/3.jpg";
+import brandLogoBueno from "../assets/projects/bueno.png";
 import brandLogoRadisson from "../assets/projects/5.png";
 import brandLogoON from "../assets/projects/6.png";
 import brandLogoSeiko from "../assets/projects/4.jpg";
 import brandLogoWasl from "../assets/projects/7.jpg";
 import brandLogoY3 from "../assets/projects/8.png";
 import brandLogoY33 from "../assets/projects/9.jpg";
-import profileImg from "@/src/assets/projects/8.png";
+import profileImg from "@/src/assets/projects/image.png";
 import { 
-  ArrowLeft, Download, Mail, Phone, MapPin, Globe, Briefcase, GraduationCap, 
-  Award, Layers, CheckCircle2, Star, Sparkles, Send, Check, Monitor, Cpu, 
-  Layers3, Compass, HardHat, FileText, Smartphone, Laptop, CheckSquare,
-  Linkedin, MessageCircle
+  ArrowLeft, Mail, Globe, GraduationCap, Sparkles, MessageCircle, Linkedin
 } from "lucide-react";
-
-const renderBrandLogo = (name: string) => {
-  switch (name) {
-    case "Bugatti":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-9 h-6 text-[#E10600] fill-current" viewBox="0 0 40 24">
-            <ellipse cx="20" cy="12" rx="19" ry="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <text x="20" y="15" fontSize="7" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle" fill="currentColor">BUGATTI</text>
-          </svg>
-          <span className="font-sans text-[7px] font-bold tracking-widest text-neutral-500 uppercase leading-none mt-1">HYPER LUXURY</span>
-        </div>
-      );
-    case "Jacob & Co":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-[#B28B45] fill-none stroke-current" viewBox="0 0 40 40" strokeWidth="1">
-            <circle cx="20" cy="20" r="16" />
-            <circle cx="20" cy="20" r="13" strokeDasharray="2 3" />
-            <path d="M20 8 L20 20 L27 15" strokeWidth="1.2" />
-            <circle cx="20" cy="20" r="1.5" fill="currentColor" />
-          </svg>
-          <span className="font-serif text-[10px] font-bold tracking-[0.25em] text-neutral-900 leading-none mt-1 uppercase">JACOB & CO</span>
-        </div>
-      );
-    case "Mercedes-Benz":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-8 h-8 text-neutral-800 fill-none stroke-current" viewBox="0 0 42 42" strokeWidth="1.2">
-            <circle cx="21" cy="21" r="16" />
-            <path d="M21 5 L21 21" />
-            <path d="M21 21 L8 29" />
-            <path d="M21 21 L34 29" />
-          </svg>
-          <span className="font-sans text-[8px] font-semibold tracking-widest text-neutral-800 uppercase leading-none mt-1">MERCEDES-BENZ</span>
-        </div>
-      );
-    case "Adidas":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-10 h-7 text-black fill-current" viewBox="0 0 40 30">
-            <polygon points="6,30 11,30 24,0 19,0" />
-            <polygon points="14,30 19,30 32,0 27,0" />
-            <polygon points="22,30 27,30 40,0 35,0" />
-          </svg>
-          <span className="font-sans text-[11px] font-extrabold tracking-tight text-black lowercase leading-none">adidas</span>
-        </div>
-      );
-    case "Al Futtaim":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-8 h-8 text-[#0F559E]" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="20" cy="20" r="16" strokeDasharray="4 2" className="opacity-30" />
-            <path d="M10 20C10 14 30 14 30 20C30 26 10 26 10 20Z" strokeWidth="1.5" />
-            <path d="M20 10C14 10 14 30 20 30C26 30 26 10 20 10Z" strokeWidth="1.5" />
-          </svg>
-          <span className="font-sans text-[8px] font-black tracking-widest text-[#0F559E] uppercase leading-none mt-1">AL-FUTTAIM</span>
-        </div>
-      );
-    case "Aldar":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-[#A21C26]" viewBox="0 0 40 40" fill="currentColor">
-            <rect x="6" y="6" width="12" height="12" className="opacity-90" />
-            <rect x="22" y="6" width="12" height="12" />
-            <rect x="6" y="22" width="12" height="12" />
-            <rect x="22" y="22" width="12" height="12" className="opacity-40" />
-          </svg>
-          <span className="font-serif text-[10px] font-bold tracking-[0.2em] text-[#A21C26] uppercase leading-none mt-1">ALDAR</span>
-        </div>
-      );
-    case "Sephora":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-6 h-6 text-black fill-current" viewBox="0 0 40 40">
-            <path d="M20 4C14 10 14 20 20 28C24 33 28 35 28 35C28 35 25 28 24 24C22 18 24 10 20 4Z" />
-          </svg>
-          <span className="font-sans text-[8px] font-semibold tracking-[0.3em] text-black uppercase leading-none mt-1">SEPHORA</span>
-        </div>
-      );
-    case "Radisson":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-10 h-6 text-[#1C6AA6]" viewBox="0 0 40 20" fill="none" stroke="currentColor" strokeWidth="1">
-            <path d="M4 14 C10 6, 30 6, 36 14" strokeWidth="1.2" className="opacity-40" />
-            <path d="M8 10 C14 8, 26 8, 32 10" strokeWidth="1.2" />
-          </svg>
-          <span className="font-serif italic text-[11px] font-bold text-[#1C6AA6] tracking-wide leading-none uppercase">Radisson</span>
-          <span className="text-[6px] font-sans font-bold uppercase tracking-[0.2em] text-[#0B3C61]/70 leading-none">HOTELS</span>
-        </div>
-      );
-    case "ON":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-0.5">
-          <div className="flex items-center justify-center space-x-1">
-            <div className="flex flex-col justify-between h-[22px] text-black">
-              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M12 21 A 9 9 0 1 1 17 6" />
-              </svg>
-              <svg className="w-3.5 h-3.5 -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M4 21 V10 A 6 6 0 0 1 16 10 V21" />
-              </svg>
-            </div>
-            <span className="font-sans text-[10px] font-bold text-black tracking-[0.15em] uppercase leading-none">ON</span>
-          </div>
-          <span className="text-[6px] font-mono tracking-widest text-neutral-500 uppercase leading-none">SWISS RUNNING</span>
-        </div>
-      );
-    case "Seiko":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-neutral-800" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1">
-            <circle cx="20" cy="20" r="16" />
-            <circle cx="20" cy="20" r="13" strokeDasharray="1 3" />
-            <line x1="20" y1="20" x2="20" y2="10" strokeWidth="1.5" />
-            <line x1="20" y1="20" x2="28" y2="20" />
-          </svg>
-          <span className="font-serif text-[10px] font-medium tracking-[0.4em] text-neutral-900 uppercase leading-none mt-1 pl-1">SEIKO</span>
-        </div>
-      );
-    case "Wasl":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-[#E29C17]" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="8" y="8" width="24" height="24" rx="2" />
-            <path d="M12 20 L18 26 L26 14" strokeWidth="2.5" />
-          </svg>
-          <span className="font-sans text-[9px] font-bold tracking-widest text-neutral-800 uppercase leading-none mt-1">wasl</span>
-        </div>
-      );
-    case "La Marquise":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-[#C59B27]" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1">
-            <circle cx="20" cy="20" r="15" />
-            <circle cx="20" cy="20" r="11" strokeDasharray="2 2" />
-            <path d="M20 7 L22 13 L27 12 L24 16 L27 20 L22 19 L20 25 L18 19 L13 20 L16 16 L13 12 L18 13 Z" fill="currentColor" className="opacity-15" />
-            <circle cx="20" cy="20" r="2" fill="currentColor" />
-          </svg>
-          <span className="font-serif text-[7px] font-light tracking-[0.25em] text-[#C59B27] uppercase leading-none mt-1">LA MARQUISE</span>
-        </div>
-      );
-    case "Mumuso":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-1">
-          <svg className="w-7 h-7 text-[#00A859]" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M11 15 V30 H29 V15" />
-            <path d="M16 15 C16 11, 24 11, 24 15" />
-            <circle cx="17" cy="21" r="1.2" fill="currentColor" />
-            <circle cx="23" cy="21" r="1.2" fill="currentColor" />
-            <path d="M18 24 Q20 26, 22 24" strokeWidth="1.2" />
-          </svg>
-          <span className="font-sans text-[8px] font-extrabold tracking-widest text-[#00A859] uppercase leading-none mt-1">MUMUSO</span>
-        </div>
-      );
-    case "Bueno":
-      return (
-        <div className="flex flex-col items-center justify-center space-y-0.5">
-          <svg className="w-7 h-6 text-[#6F4E37]" viewBox="0 0 40 40" fill="currentColor">
-            <path d="M10 18 C10 13, 26 13, 26 18 V26 C26 30, 10 30, 10 26 Z M26 18 H29 C31 18, 31 22, 29 24 H26 Z" />
-            <path d="M14 9 Q15 12, 14 15 M18 8 Q19 11, 18 14 M22 9 Q23 12, 22 15" stroke="currentColor" strokeWidth="1.5" fill="none" />
-          </svg>
-          <span className="font-serif italic text-xs font-semibold tracking-wider text-[#6F4E37] lowercase">bueno</span>
-        </div>
-      );
-    default:
-      return <span className="font-serif text-base tracking-wider text-neutral-800 uppercase">{name}</span>;
-  }
-};
 
 export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   useEffect(() => {
@@ -292,9 +120,14 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
                 AKASH SUDHAKAR
               </h1>
-              <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
-                Architect <span className="text-[#C5A059] mx-2">|</span> Retail Designer <span className="text-[#C5A059] mx-2">|</span> 3D Visualizer
-              </h2>
+              <div className="space-y-2">
+                <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
+                  Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
+                </h2>
+                <p className="font-mono text-[10px] tracking-[0.3em] text-[#B28B45] uppercase font-bold border-l border-[#C5A059] pl-3">
+                  PIXEL DESIGN STUDIO
+                </p>
+              </div>
             </div>
           </div>
           <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end order-1 md:order-2">
