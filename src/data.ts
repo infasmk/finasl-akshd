@@ -4,7 +4,7 @@ import aldarEasternMangrovbsImg from "./assets/projects/pool.png";
 import seikoDubaiMallImg from "./assets/projects/seiko.png";
 import editDEssenceImg from "./assets/projects/spray.png";
 import adidasY3Img from "./assets/projects/y3.png";
-import aImg from "./assets/projects/all/a.png";
+
 import bImg from "./assets/projects/all/b.png";
 import cImg from "./assets/projects/all/c.png";
 import dImg from "./assets/projects/all/d.png";
@@ -151,17 +151,17 @@ export const PROJECTS: Project[] = [
     paymentPlan: "",
     description: "Scope Of Work",
   }, 
-  {
-  id: "A",
-  title: "",
-  subtitle: "",
-  location: "",
-  image: aImg,
-  category: "",
-  startingPrice: "",
-  paymentPlan: "",
-  description: "",
-},
+//   {
+//   id: "A",
+//   title: "",
+//   subtitle: "",
+//   location: "",
+//   image: aImg,
+//   category: "",
+//   startingPrice: "",
+//   paymentPlan: "",
+//   description: "",
+// },
 {
   id: "B",
   title: "",
