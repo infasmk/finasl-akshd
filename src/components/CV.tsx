@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import brandLogoAdidas from "../assets/projects/1.jpg";
 import brandLogoAlFuttaim from "../assets/projects/2.png";
-import brandLogoBueno from "../assets/projects/bueno.png";
+import brandLogoBueno from "../assets/projects/3.jpg";
 import brandLogoRadisson from "../assets/projects/5.png";
 import brandLogoON from "../assets/projects/6.png";
 import brandLogoSeiko from "../assets/projects/4.jpg";
