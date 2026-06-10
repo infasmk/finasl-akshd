@@ -9,7 +9,7 @@ import brandLogoSeiko from "../assets/projects/4.jpg";
 import brandLogoWasl from "../assets/projects/7.jpg";
 import brandLogoY3 from "../assets/projects/8.png";
 import brandLogoY33 from "../assets/projects/9.jpg";
-import profileImg from "@/src/assets/projects/8.png";
+import profileImg from "@/src/assets/projects/image.png";
 import { 
   ArrowLeft, Mail, Globe, GraduationCap, Sparkles, MessageCircle, Linkedin
 } from "lucide-react";
