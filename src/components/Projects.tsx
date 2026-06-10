@@ -7,18 +7,6 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const [activeTouchId, setActiveTouchId] = useState<string | null>(null);
-  const [fullscreenProject, setFullscreenProject] = useState<Project | null>(null);
-
-  // Keyboard close on ESC
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setFullscreenProject(null);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
   const handleCardTouch = (projectId: string) => {
     setActiveTouchId(activeTouchId === projectId ? null : projectId);
@@ -84,14 +72,7 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
                 }`}
               >
                 {/* Image Container with Blur Reveal and scaling */}
-                <div 
-                  className="relative w-full h-[280px] sm:h-[320px] overflow-hidden cursor-zoom-in group/img"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setFullscreenProject(project);
-                  }}
-                  title="Click to view fullscreen masterwork"
-                >
+                <div className="relative w-full h-[280px] sm:h-[320px] overflow-hidden">
                   
                   {/* Image */}
                   <img
@@ -159,67 +140,6 @@ export default function Projects({ onViewAllProjects }: { onViewAllProjects?: ()
         </div>
 
       </div>
-
-      {/* Fullscreen Image Lightbox Modal */}
-      <AnimatePresence>
-        {fullscreenProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[1000] bg-[#050505]/98 backdrop-blur-md flex flex-col justify-center items-center p-4 cursor-default select-none"
-            onClick={() => setFullscreenProject(null)}
-          >
-            {/* Top Bar Controls */}
-            <div className="absolute top-6 left-0 right-0 px-6 md:px-12 flex justify-between items-center z-10">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setFullscreenProject(null);
-                }}
-                className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-gold hover:text-white uppercase transition-colors pointer-events-auto cursor-pointer"
-              >
-                <span className="w-6 h-6 flex items-center justify-center border border-gold/40 rounded-full group-hover:border-white transition-colors">&larr;</span>
-                <span>BACK TO PROJECTS</span>
-              </button>
-              
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setFullscreenProject(null);
-                }}
-                className="text-xs font-mono tracking-widest text-[#9ca3af] hover:text-white transition-colors uppercase border border-white/10 px-3 py-1.5 backdrop-blur bg-black/40 pointer-events-auto cursor-pointer"
-              >
-                CLOSE [ESC]
-              </button>
-            </div>
-
-            {/* Main Interactive Zoomable Image container */}
-            <div className="max-w-4xl max-h-[70vh] md:max-h-[75vh] w-full flex justify-center items-center relative p-2 pointer-events-none">
-              <motion.img
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                src={fullscreenProject.image}
-                alt={fullscreenProject.title}
-                className="max-h-[60vh] md:max-h-[70vh] max-w-full object-contain shadow-2xl border border-white/10"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            {/* Captions Detail Bar at bottom */}
-            <div className="absolute bottom-6 md:bottom-10 text-center max-w-xl px-4 space-y-1">
-              <h3 className="font-serif text-lg md:text-2xl text-white tracking-widest uppercase mb-1">
-                {fullscreenProject.title}
-              </h3>
-              <p className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] text-[#B28B45] uppercase font-bold">
-                {fullscreenProject.subtitle} {fullscreenProject.location ? `| ${fullscreenProject.location}` : ''}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useMemo, FormEvent, useEffect } from "react";
+import { useState, useMemo, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, Shield, Award, MapPin, Code, Copy, Check, FolderPlus, UploadCloud } from "lucide-react";
 import { PROJECTS, Project } from "../data";
@@ -14,18 +14,6 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
   const [inquireProject, setInquireProject] = useState<Project | null>(null);
   const [inquirySubmitted, setInquirySubmitted] = useState(false);
   const [activeTouchId, setActiveTouchId] = useState<string | null>(null);
-  const [fullscreenProject, setFullscreenProject] = useState<Project | null>(null);
-
-  // Keyboard close on ESC
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setFullscreenProject(null);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
   // Developer Code Generator States
   const [showDevGuide, setShowDevGuide] = useState(false);
@@ -118,15 +106,15 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
   };
 
   return (
-    <div className="min-h-screen bg-luxury-black text-white pt-28 sm:pt-32 md:pt-36 pb-14 relative w-full overflow-x-hidden">
+    <div className="min-h-screen bg-luxury-black text-white pt-16 pb-14 relative w-full overflow-x-hidden">
       {/* Decorative ambient background glows */}
       <div className="absolute top-[10%] left-[-10%] w-96 h-96 bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-[30%] right-[-10%] w-96 h-96 bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Navigation & Header */}
-        <div className="mb-14 relative z-30 pointer-events-auto">
+        <div className="mb-14">
           <div className="pb-6 border-b border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <button
               onClick={onBackToHome}
@@ -207,14 +195,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                                 : "bg-luxury-dark/95 border-white/5 hover:border-gold/30 shadow-sm"
                             }`}
                           >
-                            <div 
-                              className="relative w-full h-[140px] min-[480px]:h-[170px] md:h-[200px] overflow-hidden cursor-zoom-in"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setFullscreenProject(project);
-                              }}
-                              title="Click to view fullscreen masterwork"
-                            >
+                            <div className="relative w-full h-[140px] min-[480px]:h-[170px] md:h-[200px] overflow-hidden">
                               <img
                                 src={project.image}
                                 alt={`${project.title}`}
@@ -301,14 +282,7 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                               isActive ? "scale-[1.01]" : ""
                             }`}
                           >
-                            <div 
-                              className="relative w-full aspect-[4/3] rounded-lg overflow-hidden cursor-zoom-in"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setFullscreenProject(project);
-                              }}
-                              title="Click to view fullscreen concept exploration"
-                            >
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                               <img
                                 src={project.image}
                                 alt={`${project.title}`}
@@ -647,67 +621,6 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
               </div>
 
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Fullscreen Image Lightbox Modal */}
-      <AnimatePresence>
-        {fullscreenProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[2000] bg-[#050505]/98 backdrop-blur-md flex flex-col justify-center items-center p-4 cursor-default select-none animate-fade-in"
-            onClick={() => setFullscreenProject(null)}
-          >
-            {/* Top Bar Controls */}
-            <div className="absolute top-6 left-0 right-0 px-6 md:px-12 flex justify-between items-center z-10">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setFullscreenProject(null);
-                }}
-                className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-gold hover:text-white uppercase transition-colors pointer-events-auto cursor-pointer"
-              >
-                <span className="w-6 h-6 flex items-center justify-center border border-gold/40 rounded-full group-hover:border-white transition-colors">&larr;</span>
-                <span>BACK TO ARCHIVE</span>
-              </button>
-              
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setFullscreenProject(null);
-                }}
-                className="text-xs font-mono tracking-widest text-[#9ca3af] hover:text-white transition-colors uppercase border border-white/10 px-3 py-1.5 backdrop-blur bg-black/40 pointer-events-auto cursor-pointer"
-              >
-                CLOSE [ESC]
-              </button>
-            </div>
-
-            {/* Main Interactive Zoomable Image container */}
-            <div className="max-w-4xl max-h-[70vh] md:max-h-[75vh] w-full flex justify-center items-center relative p-2 pointer-events-none">
-              <motion.img
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                src={fullscreenProject.image}
-                alt={fullscreenProject.title}
-                className="max-h-[60vh] md:max-h-[70vh] max-w-full object-contain shadow-2xl border border-white/10"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            {/* Captions Detail Bar at bottom */}
-            <div className="absolute bottom-6 md:bottom-10 text-center max-w-xl px-4 space-y-1">
-              <h3 className="font-serif text-lg md:text-2xl text-white tracking-widest uppercase mb-1">
-                {fullscreenProject.title}
-              </h3>
-              <p className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] text-[#B28B45] uppercase font-bold">
-                {fullscreenProject.subtitle} {fullscreenProject.location ? `| ${fullscreenProject.location}` : ''}
-              </p>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
