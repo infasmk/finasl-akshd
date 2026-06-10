@@ -39,11 +39,8 @@ export default function Timeline() {
           <div className="lg:col-span-4">
            
             <h2 className="font-serif text-3xl md:text-4xl text-neutral-900 font-extralight tracking-tight uppercase">
-              TIMELINE
+        TIMELINE
             </h2>
-            <p className="font-mono text-[10px] tracking-[0.3em] text-[#B28B45] uppercase mt-2 font-bold">
-              PIXEL DESIGN STUDIO
-            </p>
           </div>
 
           {/* RIGHT AREA: Chronological track */}
