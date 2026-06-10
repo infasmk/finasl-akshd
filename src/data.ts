@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: " sss",
+    description: " Scope Of Work ",
   },
   {
     id: "bueno",
@@ -105,7 +105,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: "",
+    description: "Scope Of Work",
   },
  {
     id: "aldar-eastern-mangrovbs",
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: "",
+    description: "Scope Of Work",
   },
   {
     id: "seiko-dubai-mall",
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: "",
+    description: "Scope Of Work",
   },
     {
     id: "edit-d-essence",
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: "",
+    description: "Scope Of Work",
   },
    {
     id: "adidas-y3",
@@ -149,7 +149,7 @@ export const PROJECTS: Project[] = [
     category: "",
     startingPrice: "",
     paymentPlan: "",
-    description: "",
+    description: "Scope Of Work",
   }, 
 //   {
 //   id: "A",
