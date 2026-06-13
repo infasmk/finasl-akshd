@@ -236,15 +236,20 @@ export default function AllProjects({ onBackToHome }: AllProjectsProps) {
                                 }`}>
                                   {project.title}
                                 </h3>
-                                <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
-                                  {project.subtitle}
-                                </p>
-                              </div>
-                              {project.description && (
+                              
+
+                                   {project.description && (
                                 <p className="font-sans text-[10px] text-gray-400 font-light leading-relaxed line-clamp-3">
                                   {project.description}
                                 </p>
                               )}
+                              </div>
+                           
+  <p className="font-mono text-[7px] sm:text-[8px] tracking-[0.14em] text-[#B28B45] uppercase font-semibold leading-tight">
+                                  {project.subtitle}
+                                </p>
+
+
                             </div>
                           </motion.div>
                         );
