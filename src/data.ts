@@ -438,11 +438,11 @@ export const PROJECTS: Project[] = [
         { id: "FGHF", title: "", subtitle: "", location: "", image: ajImg, category: "AI Concept", startingPrice: "", paymentPlan: "",  description: "", }, 
         { id: "FS", title: "", subtitle: "", location: "", image: akImg, category: "AI Concept", startingPrice: "", paymentPlan: "",  description: "", },
         { id: "GDFG", title: "", subtitle: "", location: "", image: alImg, category: "AI Concept", startingPrice: "", paymentPlan: "",  description: "", }, 
-        { id: "HH", title："", subtitle："", location："", image：amImg, category："AI Concept", startingPrice："", paymentPlan："",  description："", },
-         { id："RDGDG", title："", subtitle："", location："", image：anImg, category："AI Concept", startingPrice："", paymentPlan："",  description："", },
-          { id："RETER", title："", subtitle："", location："", image：aoImg, category："AI Concept", startingPrice："", paymentPlan："",  description："", },
-           { id："2", title："", subtitle："", location："", image：apImg, category："AI Concept", startingPrice："", paymentPlan："",  description："", },
-            { id："52", title："", subtitle："", location："", image："aqImg", category："AI Concept", startingPrice："", paymentPlan："",  description："", },
+        { id: "HH", title: "", subtitle: "", location: "", image: amImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+         { id: "RDGDG", title: "", subtitle: "", location: "", image: anImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+          { id: "RETER", title: "", subtitle: "", location: "", image: aoImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+           { id: "2", title: "", subtitle: "", location: "", image: apImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
+          { id: "52", title: "", subtitle: "", location: "", image: aqImg, category: "AI Concept", startingPrice: "", paymentPlan: "", description: "", },
              { id: "55", title: "", subtitle: "", location: "", image: arImg, category: "AI Concept", startingPrice: "", paymentPlan: "",  description: "", },
               { id: "85", title: "", subtitle: "", location: "", image: asImg, category: "AI Concept", startingPrice: "", paymentPlan: "",  description: "", } 
 
