@@ -30,14 +30,14 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   // Static Data
   const STATS = [
     { value: "3+", label: "Years Experience" },
-    { value: "200+", label: "Projects Completed" },
+    { value: "250+", label: "Projects Completed" },
     { value: "200,000+", label: "Sq.ft Designed" },
   ];
 
   const CAREER_TIMELINE = [
     {
       period: "2026 - Present",
-      title: "CO-ORDINATOR & RETAIL CONCEPTUAL DESIGNER",
+      title: " DESIGN CO-ORDINATOR & RETAIL CONCEPTUAL DESIGNER",
       location: "",
       stats: "",
     },

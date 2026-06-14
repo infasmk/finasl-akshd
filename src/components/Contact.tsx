@@ -40,7 +40,7 @@ export default function Contact() {
                   <div className="space-y-1">
                    
                     <h3 className="font-serif text-xl font-light text-neutral-900 uppercase tracking-wider">
-                    AKASH SUNDHAKAR
+                    AKASH  SUDHAKAR
                     </h3>
                   </div>
                   {/* Fine logo graphic */}
