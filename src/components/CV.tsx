@@ -470,8 +470,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                     {/* Email detail card */}
                     <div className="flex justify-between items-center pb-1">
                       <span className="font-mono text-[9px] tracking-widest text-[#B28B45] uppercase font-semibold">EMAIL</span>
-                      <a href="mailto:arakshsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
-                        arakshsudhakar@gmail.com
+                      <a href="mailto:arakashsudhakar@gmail.com" className="font-mono text-xs text-neutral-800 hover:text-[#C5A059] transition-colors underline font-semibold">
+                        arakashsudhakar@gmail.com
                       </a>
                     </div>
                   </div>
@@ -503,7 +503,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
 
                       {/* Email Action */}
                       <a 
-                        href="mailto:arakshsudhakar@gmail.com" 
+                        href="mailto:arakashsudhakar@gmail.com" 
                         className="flex items-center justify-center w-10 h-10 bg-transparent border border-neutral-200 text-neutral-600 hover:text-[#EA4335] hover:border-[#EA4335] rounded-full transition-all duration-300"
                         title="Send Email"
                       >

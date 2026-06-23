@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
   {
         id: "adidas",
     title: "SINGAPORE AIRPORT",
-    subtitle: "Concept and design developement , 3D model And rendering",
+    subtitle: "Concept and design development , 3D model And rendering",
     location: "",
     image: adidasImg,
     category: "",
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
  {
     id: "aldar-eastern-mangrovbs",
     title: "ALDAR EASTERN MANGROVBS ",
-    subtitle: "Concept and design developement , 3D model And rendering",
+    subtitle: "Concept and design development , 3D model And rendering",
     location: "",
     image: aldarEasternMangrovbsImg,
     category: "",
@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
   {
     id: "seiko-dubai-mall",
     title: "SEIKO DUBAI MALL",
-    subtitle: "Concept and design developement , 3D model And rendering",
+    subtitle: "Concept and design development , 3D model And rendering",
     location: "",
     image: seikoDubaiMallImg,
     category: "",
@@ -132,7 +132,7 @@ export const PROJECTS: Project[] = [
     {
     id: "edit-d-essence",
     title: "EDIT'D ESSENCE",
-    subtitle: "Concept and design developement , 3D model And rendering",
+    subtitle: "Concept and design development , 3D model And rendering",
     location: "",
     image: editDEssenceImg,
     category: "",
@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
    {
     id: "adidas-y3",
     title: "ADIDAS Y3",
-    subtitle: "Concept and design developement , 3D model And rendering",
+    subtitle: "Concept and design development , 3D model And rendering",
     location: "",
     image: adidasY3Img,
     category: "",
@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
 //   {
 //   id: "A",
 //   title: "",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: aImg,
 //   category: "",
@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
 {
   id: "B",
   title: "VIETNAM - HONAI CENTRE ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: bImg,
   category: "",
@@ -176,7 +176,7 @@ export const PROJECTS: Project[] = [
 {
   id: "C",
   title: "PHILIPPINES - MALL OF ASIA ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: cImg,
   category: "",
@@ -187,7 +187,7 @@ export const PROJECTS: Project[] = [
 {
   id: "D",
   title: "BELGIUM",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: dImg,
   category: "",
@@ -198,7 +198,7 @@ export const PROJECTS: Project[] = [
 // {
 //   id: "E",
 //   title: "",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: eImg,
 //   category: "",
@@ -209,7 +209,7 @@ export const PROJECTS: Project[] = [
 {
   id: "F",
   title: "AUH",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: fImg,
   category: "",
@@ -220,7 +220,7 @@ export const PROJECTS: Project[] = [
 {
   id: "G",
   title: "NETHERLANDS ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: gImg,
   category: "",
@@ -231,7 +231,7 @@ export const PROJECTS: Project[] = [
 {
   id: "H",
   title: "DUBAI DFC -EDIT D ESSENCE",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: hImg,
   category: "",
@@ -242,7 +242,7 @@ export const PROJECTS: Project[] = [
 {
   id: "I",
   title: "DUBAI WORKSPACE  ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: iImg,
   category: "",
@@ -253,7 +253,7 @@ export const PROJECTS: Project[] = [
 {
   id: "J",
   title: "WORKSPACE",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: jImg,
   category: "",
@@ -264,7 +264,7 @@ export const PROJECTS: Project[] = [
 {
   id: "K",
   title: "INDONESIA BALI - ADIDAS ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: kImg,
   category: "",
@@ -275,7 +275,7 @@ export const PROJECTS: Project[] = [
 {
   id: "L",
   title: "DUBAI HOTEL LOBBY ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: lImg,
   category: "",
@@ -286,7 +286,7 @@ export const PROJECTS: Project[] = [
 {
   id: "M",
   title: "DUBAI DFC -BEUNO",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: mImg,
   category: "",
@@ -297,7 +297,7 @@ export const PROJECTS: Project[] = [
 {
   id: "N",
   title: "SINGAPORE TERMINAL  3",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: nImg,
   category: "",
@@ -308,7 +308,7 @@ export const PROJECTS: Project[] = [
 {
   id: "O",
   title: "DUBAI WORKSPACE  LOBBY ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: oImg,
   category: "",
@@ -319,7 +319,7 @@ export const PROJECTS: Project[] = [
 {
   id: "P",
   title: "ABUDHABI EASTERN MANGROVES -PLAY AREA ",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: pImg,
   category: "",
@@ -330,7 +330,7 @@ export const PROJECTS: Project[] = [
 {
   id: "Q",
   title: "VIETNAM",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: qImg,
   category: "",
@@ -352,7 +352,7 @@ export const PROJECTS: Project[] = [
 // {
 //   id: "S",
 //   title: "",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: sImg,
 //   category: "",
@@ -363,7 +363,7 @@ export const PROJECTS: Project[] = [
 // {
 //   id: "T",
 //   title: "",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: tImg,
 //   category: "",
@@ -374,7 +374,7 @@ export const PROJECTS: Project[] = [
 // {
 //   id: "U",
 //   title: "MALAYSIA BOUSTEADOR ",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: uImg,
 //   category: "",
@@ -385,7 +385,7 @@ export const PROJECTS: Project[] = [
 // {
 //   id: "V",
 //   title: "",
-//   subtitle: "Concept and design developement , 3D model And rendering",
+//   subtitle: "Concept and design development , 3D model And rendering",
 //   location: "",
 //   image: vImg,
 //   category: "",
@@ -396,7 +396,7 @@ export const PROJECTS: Project[] = [
 {
   id: "W",
   title: "MALAYSIA BOUSTEADOR",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: wImg,
   category: "",
@@ -407,7 +407,7 @@ export const PROJECTS: Project[] = [
 {
   id: "X",
   title: "DUBAI - CONCEPT STORE",
-  subtitle: "Concept and design developement , 3D model And rendering",
+  subtitle: "Concept and design development , 3D model And rendering",
   location: "",
   image: xImg,
   category: "",
