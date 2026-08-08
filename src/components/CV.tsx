@@ -133,33 +133,36 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
           <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
 
-       
+          <div className="relative z-10 h-full flex items-end">
+            <div className="grid w-full grid-cols-1 md:grid-cols-12 gap-8 items-end p-8 md:p-12">
+              <div className="md:col-span-8 lg:col-span-9 flex flex-col justify-end max-w-4xl">
+                {/* Main Name Heading */}
+                <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white !text-white leading-none tracking-tight uppercase drop-shadow-lg">
+                  AKASH SUDHAKAR
+                </h1>
 
-              {/* Main Name Heading */}
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white !text-white leading-none tracking-tight uppercase drop-shadow-lg">
-                AKASH SUDHAKAR
-              </h1>
-
-              {/* Subtitles & Design Studio */}
-              <div className="space-y-1.5 pt-1 border-l-2 border-[#C5A059] pl-4">
-                <h2 className="font-mono text-xs sm:text-sm md:text-base tracking-[0.25em] text-white/95 uppercase font-light">
-                  Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist
-                </h2>
-                <p className="font-mono text-xs sm:text-sm tracking-[0.3em] text-[#C5A059] uppercase font-bold">
-                  PIXEL DESIGN STUDIO
-                </p>
+                {/* Subtitles & Design Studio */}
+                <div className="space-y-1.5 pt-1 border-l-2 border-[#C5A059] pl-4">
+                  <h2 className="font-mono text-xs sm:text-sm md:text-base tracking-[0.25em] text-white/95 uppercase font-light">
+                    Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist
+                  </h2>
+                  <p className="font-mono text-xs sm:text-sm tracking-[0.3em] text-[#C5A059] uppercase font-bold">
+                    PIXEL DESIGN STUDIO
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end order-1 md:order-2">
-            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border border-[#C5A059]/40 p-1 bg-[#FAF9F5] shadow-xl hover:scale-[1.03] transition-transform duration-500">
-              <img
-                src={profileImg}
-                alt="Akash Sudhakar Profile"
-                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 select-none"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 rounded-full border border-neutral-200/50 pointer-events-none" />
+
+              <div className="md:col-span-4 lg:col-span-3 flex justify-start md:justify-end order-1 md:order-2">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border border-[#C5A059]/40 p-1 bg-[#FAF9F5] shadow-xl hover:scale-[1.03] transition-transform duration-500">
+                  <img
+                    src={profileImg}
+                    alt="Akash Sudhakar Profile"
+                    className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 select-none"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 rounded-full border border-neutral-200/50 pointer-events-none" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
