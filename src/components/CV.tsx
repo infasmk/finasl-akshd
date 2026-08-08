@@ -133,18 +133,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
           <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
 
-          {/* Content Layer directly on top of the image */}
-          <div className="relative z-10 p-6 sm:p-10 md:p-12 flex flex-col justify-end min-h-[360px] sm:min-h-[420px] md:min-h-[480px] text-white">
-            <div className="space-y-4 max-w-3xl">
-              {/* Badge tag */}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-black font-bold bg-[#C5A059] px-3 py-1 shadow-md">
-                  CURRICULUM VITAE
-                </span>
-                <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/90 bg-black/60 backdrop-blur border border-white/20 px-3 py-1">
-                  DUBAI, UAE
-                </span>
-              </div>
+       
 
               {/* Main Name Heading */}
               <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white !text-white leading-none tracking-tight uppercase drop-shadow-lg">
