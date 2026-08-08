@@ -76,8 +76,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { name: "D5 Render", proficiency: 96, type: "Real-time photorealistic cinematic environment raytracing and light walks." },
     { name: "Vista Pro 360", proficiency: 88, type: "True spatial depth 360 virtual reality panoramic tours for stakeholders." },
     { name: "Lumion", proficiency: 92, type: "Breathtaking natural biome, landscaping, and dynamic weather animations." },
-    { name: "Lightroom", proficiency: 85, type: "Architectural color grades, exposure matching, and luxury tone curve controls." }
-    { name: "Archicad", proficiency: 65, type: "Architectural color grades, exposure matching, and luxury tone curve controls." }
+    { name: "Lightroom", proficiency: 85, type: "Architectural color grades, exposure matching, and luxury tone curve controls." },
+    { name: "Archicad", proficiency: 65, type: "Architectural color grades, exposure matching, and luxury tone curve controls." },
   ];
 
   const AI_TOOLS = [
@@ -87,8 +87,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { name: "Krea", role: "Ultra-High-Definition Dynamic Texture Upscaling" },
     { name: "Magnific", role: "Fine-Detail Architectural Texture Synthesis" },
     { name: "Vizmaker", role: "Photorealistic Fast Concept Visualization" },
-    { name: "Kling", role: "Parametric Architectural Fluid Animations" }
-    { name: "Claude", role: "Parametric Architectural Fluid Animations" }
+    { name: "Kling", role: "Parametric Architectural Fluid Animations" },
+    { name: "Claude", role: "Parametric Architectural Fluid Animations" },
   ];
 
   return (
