@@ -104,7 +104,22 @@ export default function Navbar({
           </nav>
 
           {/* Mobile Action Controls */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center space-x-2.5 md:hidden">
+            {/* Quick CV Direct Entry Button for Mobile */}
+            <button
+              onClick={() => handleNavClick("cv")}
+              className={`px-2.5 py-1 text-[10px] font-mono tracking-widest font-bold uppercase rounded border transition-all duration-300 cursor-pointer ${
+                currentPage === "cv"
+                  ? "bg-gold text-black border-gold shadow-sm"
+                  : isScrolledOrCV && !mobileMenuOpen
+                    ? "border-neutral-800 text-neutral-900 hover:bg-gold hover:border-gold hover:text-black"
+                    : "border-white/40 text-white hover:bg-gold hover:border-gold hover:text-black"
+              }`}
+              title="Open CV"
+            >
+              CV
+            </button>
+
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
