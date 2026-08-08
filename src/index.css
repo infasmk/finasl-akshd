@@ -276,6 +276,17 @@ html.light-theme .brand-marquee-block span.text-gold {
   color: #C5A059 !important;
 }
 
+/* Custom Header Adaptive Contrast Styling rules */
+html.light-theme #luxury-navbar .header-text-white {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html.light-theme #luxury-navbar .header-text-black {
+  color: #050505 !important;
+  border-color: rgba(5, 5, 5, 0.8) !important;
+}
+
 /* Avoid color inversion inside Hero & CV Hero when in light theme to keep elegant contrast on dark background images */
 html.light-theme #hero,
 html.light-theme #cv-hero {
