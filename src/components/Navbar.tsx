@@ -69,12 +69,10 @@ export default function Navbar({
             className="flex items-center space-x-2 group focus:outline-none cursor-pointer"
           >
             <span
-              className={`font-serif tracking-[0.05em] text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold transition-colors duration-300 block ${
-                isScrolledOrCV && !mobileMenuOpen ? "header-text-black" : "header-text-white"
-              }`}
+              className="font-serif tracking-[0.05em] text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold transition-colors duration-300 block"
               style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
             >
-              Akash Sudhakar
+          AK
             </span>
             <span
               className="text-[8px] font-mono tracking-widest uppercase hidden sm:inline-block transition-colors duration-300 animate-pulse ml-2"
@@ -96,10 +94,8 @@ export default function Navbar({
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-xs font-mono tracking-widest relative py-1 hover:text-gold transition-colors duration-300 group cursor-pointer ${
-                  isScrolledOrCV && !mobileMenuOpen ? "header-text-black" : "header-text-white"
-                }`}
-                style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
+                className="text-xs font-mono tracking-widest relative py-1 hover:text-gold transition-colors duration-300 group cursor-pointer"
+                style={{ color: isScrolledOrCV ? "#050505" : "#ffffff" }}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -108,26 +104,7 @@ export default function Navbar({
           </nav>
 
           {/* Mobile Action Controls */}
-          <div className="flex items-center space-x-2.5 md:hidden">
-            {/* Quick CV Direct Entry Button for Mobile with Adaptive Contrast Text */}
-            <button
-              onClick={() => handleNavClick("cv")}
-              className={`px-2.5 py-1 text-[10px] font-mono tracking-widest font-bold uppercase rounded border bg-transparent transition-colors duration-300 cursor-pointer flex items-center justify-center ${
-                currentPage === "cv"
-                  ? "text-gold border-gold"
-                  : isScrolledOrCV && !mobileMenuOpen
-                    ? "header-text-black hover:text-gold hover:border-gold"
-                    : "header-text-white hover:text-gold hover:border-gold"
-              }`}
-              style={{
-                color: currentPage === "cv" ? "#C5A059" : (isScrolledOrCV && !mobileMenuOpen) ? "#050505" : "#ffffff",
-                borderColor: currentPage === "cv" ? "#C5A059" : (isScrolledOrCV && !mobileMenuOpen) ? "rgba(5,5,5,0.8)" : "rgba(255,255,255,0.4)"
-              }}
-              title="Open CV"
-            >
-              CV
-            </button>
-
+          <div className="flex items-center md:hidden">
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -135,12 +112,9 @@ export default function Navbar({
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-5 h-5 header-text-white" style={{ color: "#ffffff" }} />
+                <X className="w-5 h-5" style={{ color: "#ffffff" }} />
               ) : (
-                <Menu
-                  className={`w-5 h-5 ${isScrolledOrCV && !mobileMenuOpen ? "header-text-black" : "header-text-white"}`}
-                  style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }}
-                />
+                <Menu className="w-5 h-5" style={{ color: isScrolledOrCV && !mobileMenuOpen ? "#050505" : "#ffffff" }} />
               )}
             </button>
           </div>
