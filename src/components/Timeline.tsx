@@ -4,7 +4,7 @@ export default function Timeline() {
   const CAREER_TIMELINE = [
     {
       period: "2026 - Present",
-      title: "DESIGN CO-ORDINATOR & RETAIL CONCEPTOAL DESIGNER",
+      title: "DESIGN CO-ORDINATOR & RETAIL CONCEPTUAL DESIGNER",
       location: "",
       stats: "",
     },
