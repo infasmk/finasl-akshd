@@ -113,18 +113,50 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           </button>
         </div>
 
-        {/* HERO SECTION */}
-        <section id="cv-hero" className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-12">
-          <div className="md:col-span-8 lg:col-span-9 space-y-4 order-2 md:order-1">
-            <div className="space-y-2">
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 leading-none tracking-tight">
+        {/* HERO SECTION - Full Section Background Profile Image */}
+        <section id="cv-hero" className="relative w-full min-h-[360px] sm:min-h-[420px] md:min-h-[480px] rounded-2xl overflow-hidden border border-[#C5A059]/30 shadow-2xl mb-12 group bg-neutral-900">
+          {/* Background Image Layer */}
+          <img
+            src={profileImg}
+            alt="Akash Sudhakar Profile Background"
+            className="absolute inset-0 w-full h-full object-cover object-top sm:object-center filter brightness-[0.75] contrast-[1.05] grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 select-none"
+            referrerPolicy="no-referrer"
+          />
+
+          {/* Gradient & Dark Overlay for pristine contrast and legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px] pointer-events-none" />
+
+          {/* Decorative Corner Architecture accents */}
+          <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
+          <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
+          <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
+          <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
+
+          {/* Content Layer directly on top of the image */}
+          <div className="relative z-10 p-6 sm:p-10 md:p-12 flex flex-col justify-end min-h-[360px] sm:min-h-[420px] md:min-h-[480px] text-white">
+            <div className="space-y-4 max-w-3xl">
+              {/* Badge tag */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-black font-bold bg-[#C5A059] px-3 py-1 shadow-md">
+                  CURRICULUM VITAE
+                </span>
+                <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/90 bg-black/60 backdrop-blur border border-white/20 px-3 py-1">
+                  DUBAI, UAE
+                </span>
+              </div>
+
+              {/* Main Name Heading */}
+              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white !text-white leading-none tracking-tight uppercase drop-shadow-lg">
                 AKASH SUDHAKAR
               </h1>
-              <div className="space-y-2">
-                <h2 className="font-mono text-[10px] tracking-[0.25em] text-neutral-800 uppercase font-light border-l border-[#C5A059] pl-3">
-                  Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist 
+
+              {/* Subtitles & Design Studio */}
+              <div className="space-y-1.5 pt-1 border-l-2 border-[#C5A059] pl-4">
+                <h2 className="font-mono text-xs sm:text-sm md:text-base tracking-[0.25em] text-white/95 uppercase font-light">
+                  Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist
                 </h2>
-                <p className="font-mono text-[10px] tracking-[0.3em] text-[#B28B45] uppercase font-bold border-l border-[#C5A059] pl-3">
+                <p className="font-mono text-xs sm:text-sm tracking-[0.3em] text-[#C5A059] uppercase font-bold">
                   PIXEL DESIGN STUDIO
                 </p>
               </div>
