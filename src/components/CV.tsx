@@ -92,7 +92,7 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
   ];
 
   return (
-    <div id="cv-root" className="pt-24 pb-0 min-h-screen text-neutral-800 relative z-10 w-full bg-[#FAF9F5]">
+    <div id="cv-root" className="pt-0 pb-0 min-h-screen text-neutral-800 relative z-10 w-full bg-[#FAF9F5]">
       {/* Visual Background Blueprint System & Fine Grid Lines */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.06] select-none z-0 overflow-hidden">
         <div className="w-full h-full bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -101,60 +101,54 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <div className="w-full h-full border-l border-r border-[#C5A059]/20 max-w-7xl mx-auto" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 animate-fade-in">
-        
-        {/* Navigation & Header Actions */}
-        <div className="pb-6 border-b border-neutral-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+      {/* FULL BLEED HERO SECTION - Full Section Background Profile Image with Edge-to-Edge display */}
+      <section id="cv-hero" className="relative w-full min-h-[480px] sm:min-h-[560px] md:min-h-[640px] overflow-hidden bg-neutral-900 mb-12">
+        {/* Background Image Layer */}
+        <img
+          src={profileImg}
+          alt="Akash Sudhakar Profile Background"
+          className="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.85] contrast-[1.05] grayscale hover:grayscale-0 transition-all duration-700 select-none"
+          referrerPolicy="no-referrer"
+        />
+
+        {/* Gradients Overlay for contrast and seamless bottom fade into the page background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF9F5] via-black/75 to-black/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
+
+        {/* Floating Back to Gallery Button inside Hero */}
+        <div className="absolute top-20 sm:top-24 left-6 md:left-12 z-20">
           <button
             onClick={onBackToHome}
             id="back-to-gallery-btn"
-            className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-[#B28B45] uppercase hover:text-neutral-900 transition-colors duration-300 cursor-pointer focus:outline-none"
+            className="group flex items-center space-x-2 text-xs font-mono tracking-widest text-white/90 bg-black/50 hover:bg-[#C5A059] hover:text-black border border-white/20 hover:border-[#C5A059] px-4 py-2 uppercase backdrop-blur-md transition-all duration-300 cursor-pointer focus:outline-none shadow-lg"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
             <span>BACK TO GALLERY</span>
           </button>
         </div>
 
-        {/* HERO SECTION - Full Section Background Profile Image */}
-        <section id="cv-hero" className="relative w-full min-h-[360px] sm:min-h-[420px] md:min-h-[480px] rounded-2xl overflow-hidden border border-[#C5A059]/30 shadow-2xl mb-12 group bg-neutral-900">
-          {/* Background Image Layer */}
-          <img
-            src={profileImg}
-            alt="Akash Sudhakar Profile Background"
-            className="absolute inset-0 w-full h-full object-cover object-top sm:object-center filter brightness-[0.75] contrast-[1.05] grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 select-none"
-            referrerPolicy="no-referrer"
-          />
+        {/* Content Layer directly on top of the image - anchored to bottom */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 p-6 sm:p-10 md:p-12 flex flex-col justify-end min-h-[480px] sm:min-h-[560px] md:min-h-[640px] text-white">
+          <div className="space-y-3 max-w-3xl">
+            {/* Main Name Heading */}
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white !text-white leading-tight tracking-tight uppercase drop-shadow-xl">
+              AKASH SUDHAKAR
+            </h1>
 
-          {/* Gradient & Dark Overlay for pristine contrast and legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30 pointer-events-none" />
-          <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px] pointer-events-none" />
-
-          {/* Decorative Corner Architecture accents */}
-          <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
-          <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
-          <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-[#C5A059]/60 pointer-events-none" />
-          <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-[#C5A059]/60 pointer-events-none" />
-
-          {/* Content Layer directly on top of the image - anchored to bottom */}
-          <div className="relative z-10 p-6 sm:p-8 md:p-10 flex flex-col justify-end min-h-[360px] sm:min-h-[420px] md:min-h-[480px] text-white">
-            <div className="space-y-2.5 max-w-3xl">
-              {/* Main Name Heading */}
-              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light text-white !text-white leading-tight tracking-tight uppercase drop-shadow-lg">
-                AKASH SUDHAKAR
-              </h1>
-
-              {/* Subtitles & Design Studio */}
-              <div className="space-y-1 pt-0.5 border-l-2 border-[#C5A059] pl-3.5">
-                <h2 className="font-mono text-xs sm:text-sm tracking-[0.2em] text-white/95 uppercase font-light">
-                  Architect <span className="text-[#C5A059] mx-1.5">|</span> Retail Design Specialist
-                </h2>
-                <p className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-[#C5A059] uppercase font-bold">
-                  PIXEL DESIGN STUDIO
-                </p>
-              </div>
+            {/* Subtitles & Design Studio */}
+            <div className="space-y-1 pt-1 border-l-2 border-[#C5A059] pl-4">
+              <h2 className="font-mono text-xs sm:text-sm md:text-base tracking-[0.2em] text-white/95 uppercase font-light">
+                Architect <span className="text-[#C5A059] mx-1.5">|</span> Retail Design Specialist
+              </h2>
+              <p className="font-mono text-xs sm:text-sm tracking-[0.25em] text-[#C5A059] uppercase font-bold">
+                PIXEL DESIGN STUDIO
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 animate-fade-in">
 
         {/* PROFILE SECTION */}
         <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
