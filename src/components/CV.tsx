@@ -77,7 +77,8 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
     { name: "Vista Pro 360", proficiency: 88, type: "True spatial depth 360 virtual reality panoramic tours for stakeholders." },
     { name: "Lumion", proficiency: 92, type: "Breathtaking natural biome, landscaping, and dynamic weather animations." },
     { name: "Lightroom", proficiency: 85, type: "Architectural color grades, exposure matching, and luxury tone curve controls." },
-    { name: "Archicad", proficiency: 65, type: "Architectural color grades, exposure matching, and luxury tone curve controls." },
+    { name: "Archicad", proficiency: 65, type: "Architectural color grades, exposure matching, and luxury tone curve controls." }, 
+    { name: "Escape", proficiency: 65, type: "Architectural color grades, exposure matching, and luxury tone curve controls." },
   ];
 
   const AI_TOOLS = [
