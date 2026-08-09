@@ -287,31 +287,31 @@ html.light-theme #luxury-navbar .header-text-black {
   border-color: rgba(5, 5, 5, 0.8) !important;
 }
 
-/* Avoid color inversion inside Hero & CV Hero when in light theme to keep elegant contrast on dark background images */
+/* Avoid color inversion inside Hero & CV Mobile Hero when in light theme to keep elegant contrast on dark background images */
 html.light-theme #hero,
-html.light-theme #cv-hero {
+html.light-theme #cv-hero-mobile {
   color: #ffffff !important;
 }
 html.light-theme #hero h1,
 html.light-theme #hero h2,
 html.light-theme #hero p,
 html.light-theme #hero span:not(.text-gold),
-html.light-theme #cv-hero h1,
-html.light-theme #cv-hero h2,
-html.light-theme #cv-hero p,
-html.light-theme #cv-hero span:not(.text-gold) {
+html.light-theme #cv-hero-mobile h1,
+html.light-theme #cv-hero-mobile h2,
+html.light-theme #cv-hero-mobile p,
+html.light-theme #cv-hero-mobile span:not(.text-gold) {
   color: #ffffff !important;
 }
 html.light-theme #hero .text-gray-300,
-html.light-theme #cv-hero .text-gray-300 {
+html.light-theme #cv-hero-mobile .text-gray-300 {
   color: #d1d5db !important;
 }
 html.light-theme #hero .text-white\/50,
-html.light-theme #cv-hero .text-white\/50 {
+html.light-theme #cv-hero-mobile .text-white\/50 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 html.light-theme #hero .border-white\/10,
-html.light-theme #cv-hero .border-white\/10 {
+html.light-theme #cv-hero-mobile .border-white\/10 {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
