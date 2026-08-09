@@ -101,8 +101,25 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
         <div className="w-full h-full border-l border-r border-[#C5A059]/20 max-w-7xl mx-auto" />
       </div>
 
-      {/* FULL BLEED HERO SECTION - Full Section Background Profile Image with Edge-to-Edge display */}
-      <section id="cv-hero" className="relative w-full min-h-[480px] sm:min-h-[560px] md:min-h-[640px] overflow-hidden bg-neutral-900 mb-12">
+      {/* Top Header Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-20 sm:pt-24 pb-4">
+        <div className="flex items-center justify-between pb-4 border-b border-neutral-200/80 mb-6 sm:mb-8">
+          <button
+            onClick={onBackToHome}
+            id="back-to-gallery-btn"
+            className="group flex items-center space-x-2.5 text-xs font-mono tracking-widest text-[#B28B45] uppercase hover:text-neutral-900 transition-colors duration-300 cursor-pointer focus:outline-none"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
+            <span>BACK TO GALLERY</span>
+          </button>
+          <span className="font-mono text-[10px] tracking-[0.25em] text-neutral-400 uppercase">
+            CURRICULUM VITAE &bull; DUBAI, UAE
+          </span>
+        </div>
+      </div>
+
+      {/* MOBILE HERO (< md): Full Bleed Section Background Image with Overlay Text */}
+      <section id="cv-hero-mobile" className="md:hidden relative w-full min-h-[420px] sm:min-h-[480px] overflow-hidden bg-neutral-900 mb-10">
         {/* Background Image Layer */}
         <img
           src={profileImg}
@@ -111,36 +128,23 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
           referrerPolicy="no-referrer"
         />
 
-        {/* Gradients Overlay for contrast and seamless bottom fade into the page background */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF9F5] via-black/75 to-black/30 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
-
-        {/* Floating Back to Gallery Button inside Hero */}
-        <div className="absolute top-20 sm:top-24 left-6 md:left-12 z-20">
-          <button
-            onClick={onBackToHome}
-            id="back-to-gallery-btn"
-            className="group flex items-center space-x-2 text-xs font-mono tracking-widest text-white/90 bg-black/50 hover:bg-[#C5A059] hover:text-black border border-white/20 hover:border-[#C5A059] px-4 py-2 uppercase backdrop-blur-md transition-all duration-300 cursor-pointer focus:outline-none shadow-lg"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
-            <span>BACK TO GALLERY</span>
-          </button>
-        </div>
+        {/* Gradients Overlay for contrast and seamless bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF9F5] via-black/65 to-black/20 pointer-events-none" />
 
         {/* Content Layer directly on top of the image - anchored to bottom */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 p-6 sm:p-10 md:p-12 flex flex-col justify-end min-h-[480px] sm:min-h-[560px] md:min-h-[640px] text-white">
-          <div className="space-y-3 max-w-3xl">
+        <div className="relative z-10 px-6 pb-8 pt-32 flex flex-col justify-end min-h-[420px] sm:min-h-[480px] text-white">
+          <div className="space-y-2.5 max-w-xl">
             {/* Main Name Heading */}
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white !text-white leading-tight tracking-tight uppercase drop-shadow-xl">
+            <h1 className="font-serif text-3xl sm:text-5xl font-light text-white !text-white leading-tight tracking-tight uppercase drop-shadow-md">
               AKASH SUDHAKAR
             </h1>
 
             {/* Subtitles & Design Studio */}
-            <div className="space-y-1 pt-1 border-l-2 border-[#C5A059] pl-4">
-              <h2 className="font-mono text-xs sm:text-sm md:text-base tracking-[0.2em] text-white/95 uppercase font-light">
+            <div className="space-y-1 border-l-2 border-[#C5A059] pl-3.5">
+              <h2 className="font-mono text-xs sm:text-sm tracking-[0.2em] text-white/95 uppercase font-light">
                 Architect <span className="text-[#C5A059] mx-1.5">|</span> Retail Design Specialist
               </h2>
-              <p className="font-mono text-xs sm:text-sm tracking-[0.25em] text-[#C5A059] uppercase font-bold">
+              <p className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-[#C5A059] uppercase font-bold">
                 PIXEL DESIGN STUDIO
               </p>
             </div>
@@ -149,6 +153,50 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
       </section>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 animate-fade-in">
+
+        {/* TABLET / DESKTOP HERO (>= md): Split Layout with Full Profile Photo on Right */}
+        <section id="cv-hero-desktop" className="hidden md:block mb-12">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-center bg-white/60 p-8 lg:p-12 rounded-2xl border border-neutral-200/80 shadow-sm backdrop-blur-sm">
+            {/* Left Column: Details */}
+            <div className="col-span-7 lg:col-span-7 space-y-6">
+              <div className="space-y-4">
+                <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-extralight text-neutral-900 leading-none tracking-tight uppercase">
+                  AKASH SUDHAKAR
+                </h1>
+                <div className="space-y-2 border-l-2 border-[#C5A059] pl-4">
+                  <h2 className="font-mono text-sm lg:text-base tracking-[0.2em] text-neutral-800 uppercase font-light">
+                    Architect <span className="text-[#C5A059] mx-2">|</span> Retail Design Specialist
+                  </h2>
+                  <p className="font-mono text-xs lg:text-sm tracking-[0.25em] text-[#B28B45] uppercase font-bold">
+                    PIXEL DESIGN STUDIO
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-2 flex items-center space-x-4 text-xs font-mono tracking-wider text-neutral-500">
+                <span className="px-3 py-1 bg-neutral-100 rounded border border-neutral-200 text-neutral-700 font-medium">DUBAI, UAE</span>
+                <a href="mailto:akashd.arch@gmail.com" className="hover:text-[#B28B45] transition-colors">akashd.arch@gmail.com</a>
+              </div>
+            </div>
+
+            {/* Right Column: Full Profile Photo on Right */}
+            <div className="col-span-5 lg:col-span-5 flex justify-end">
+              <div className="relative w-full max-w-xs lg:max-w-sm aspect-[4/5] rounded-xl overflow-hidden border border-[#C5A059]/40 bg-neutral-900 shadow-xl group hover:shadow-2xl transition-all duration-500">
+                <img
+                  src={profileImg}
+                  alt="Akash Sudhakar Profile"
+                  className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 select-none"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#C5A059] pointer-events-none" />
+                <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#C5A059] pointer-events-none" />
+                <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#C5A059] pointer-events-none" />
+                <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#C5A059] pointer-events-none" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* PROFILE SECTION */}
         <section id="cv-profile" className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10 border-t border-neutral-200 mb-12">
