@@ -112,9 +112,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
             <span>BACK TO GALLERY</span>
           </button>
-          <span className="font-mono text-[10px] tracking-[0.25em] text-neutral-400 uppercase">
-            CURRICULUM VITAE &bull; DUBAI, UAE
-          </span>
         </div>
       </div>
 
@@ -171,11 +168,6 @@ export default function CV({ onBackToHome }: { onBackToHome: () => void }) {
                     PIXEL DESIGN STUDIO
                   </p>
                 </div>
-              </div>
-
-              <div className="pt-2 flex items-center space-x-4 text-xs font-mono tracking-wider text-neutral-500">
-                <span className="px-3 py-1 bg-neutral-100 rounded border border-neutral-200 text-neutral-700 font-medium">DUBAI, UAE</span>
-                <a href="mailto:akashd.arch@gmail.com" className="hover:text-[#B28B45] transition-colors">akashd.arch@gmail.com</a>
               </div>
             </div>
 
